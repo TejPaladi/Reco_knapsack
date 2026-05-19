@@ -1,0 +1,20 @@
+{
+  "coarse_results": "/Users/tej/Desktop/Recommendation_Projects/Teaming/code/tuning_outputs/m7_sweep_coarse.csv",
+  "final_results": "/Users/tej/Desktop/Recommendation_Projects/Teaming/code/tuning_outputs/m7_sweep_final.csv",
+  "winner": {
+    "alpha": 0.5,
+    "cost_multiplier": 0.14,
+    "max_candidates": 18,
+    "G_mean": 0.36659084891304355,
+    "Volume_mean": 9.097173913043479,
+    "table2_sp": 0.07887783689310403,
+    "table3_sp": 0.06838122926794232,
+    "table3_csp": 0.06716315960874555,
+    "table3_prp": 0.06349888239585899
+  },
+  "defaults": {
+    "alpha": 0.5,
+    "cost_multiplier": 0.2,
+    "max_candidates": 18
+  }
+}

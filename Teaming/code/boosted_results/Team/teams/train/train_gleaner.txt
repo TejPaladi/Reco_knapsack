@@ -1,0 +1,36 @@
+////// Learned from a dataset containing 125 positive (125.0 weighted sum) and 0 negative (0.0 wgt'ed) examples.
+////// The minimal (wgt'ed) coverage = 3.000, the maximal (wgt'ed) NEG coverage = 0.499, and the minimal (wgt'ed) precision = 0.001 (using m = 0.1)
+
+usePrologVariables: true.
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: allPossibleMarkers
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #7, (0.35, 0.4], from 'outerLoop #1, null' and covering 25.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.378, precision = 0.996, and F1 = 0.548 - learned after 5 total and 0 acceptable nodes.  Node score = -2.640002029999989
+
+ FOR team(A, B) IF (skill(A, Anon483), interest(B, Anon483)) THEN output = 0.623044 ELSE output = -0.125445;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #1, null
+////
+////////////////////////////////////////////////////////////////////////////////
+
+// Best in (weighted) recall bin #7, (0.35, 0.4], from 'outerLoop #1, null' and covering 25.0 wgt'ed positive and 0.0 wgt'ed negative examples:
+//    Wgt'ed recall = 0.378, precision = 0.996, and F1 = 0.548 - learned after 5 total and 0 acceptable nodes.  Node score = -2.640002029999989
+
+ FOR team(A, B) IF (skill(A, Anon483), interest(B, Anon483)) THEN output = 0.623044 ELSE output = -0.125445;
+
+
+////////////////////////////////////////////////////////////////////////////////
+////
+////     Gleaner for: outerLoop #2, null
+////
+////////////////////////////////////////////////////////////////////////////////
+

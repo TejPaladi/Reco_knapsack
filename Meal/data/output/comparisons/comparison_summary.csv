@@ -1,0 +1,6 @@
+Method,Method_name,dataset,G_mean,G_std,Volume_mean,n_users,n_rows
+M7,Marginal Utility,meal_uc1_m4.csv,0.842875,0.042406,5.120256,154,11858
+M6,Knapsack,meal_uc1_m3.csv,0.816945,0.032622,5.726767,154,11858
+M1,Sequential greedy,meal_uc1_m1.csv,0.815752,0.028399,6.230225,154,11858
+M3,Boosted Bandit,meal_uc1_m2.csv,0.776097,0.077188,6.26927,154,11858
+M0,Random baseline,meal_uc1_m0.csv,0.663834,0.055815,10.0,154,11858

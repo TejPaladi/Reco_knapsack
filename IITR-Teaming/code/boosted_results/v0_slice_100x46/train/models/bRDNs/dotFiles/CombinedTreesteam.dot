@@ -1,0 +1,7 @@
+digraph G{ 
+1[label = "[skill(A, Anon4461), interest(B, Anon4461)]"];
+1 -> 2[label="True"];
+1 -> 3[label="False"];
+2[shape = box,label = "4.630(0.990)"];
+3[shape = box,label = "-1.431(0.193)"];
+}

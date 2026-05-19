@@ -1,0 +1,4 @@
+Group,Population Distribution,M0: Random baseline,M1: String / lexical matching,M2: Semantic mapper matching,M3: BoostSRL / relational learning,M6: Exact knapsack coverage,M7: Marginal-utility knapsack
+Male,0.5,0.4705,0.4595,0.4772,0.3857,0.4743,0.493
+Female,0.5,0.5295,0.5405,0.5228,0.6143,0.5257,0.507
+SP,,0.0295,0.0405,0.0228,0.1143,0.0257,0.007

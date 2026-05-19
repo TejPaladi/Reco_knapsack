@@ -1,0 +1,6 @@
+Method,Method_name,dataset,Average goodness,Average volume,avg_dm_proxy,avg_mc_proxy,avg_uc_proxy
+M7,Marginal Utility,meal_uc1_m4.csv,0.842875,5.120256,1.0,0.994291,0.534333
+M6,Knapsack,meal_uc1_m3.csv,0.816945,5.726767,1.0,0.997312,0.453524
+M1,Sequential greedy,meal_uc1_m1.csv,0.815752,6.230225,1.0,1.0,0.447257
+M3,Boosted Bandit,meal_uc1_m2.csv,0.776097,6.26927,1.0,0.909496,0.418793
+M0,Random baseline,meal_uc1_m0.csv,0.663834,10.0,1.0,0.707742,0.283758

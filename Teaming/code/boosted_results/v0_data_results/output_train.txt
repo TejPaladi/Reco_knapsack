@@ -1,0 +1,95 @@
+args[0] = -l
+args[1] = -train
+args[3] = -target
+args[5] = -trees
+train
+java.io.FileNotFoundException: train\train_bk.txt (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at edu.wisc.cs.will.Utils.check_disc.checkflagvalues(check_disc.java:23)
+	at edu.wisc.cs.will.Boosting.Common.RunBoostedModels.main(RunBoostedModels.java:222)
+
+% Starting a LEARNING run of bRDN.
+
+% Calling SETUP.
+% Running on host: MacBook-Pro-4
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+
+Resetting the LazyGroundNthArgumentClauseIndex.
+
+% Calling ILPouterLoop from createRegressionOuterLooper.
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=0: args[N]=train/train_pos.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=1: args[N]=train/train_neg.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=2: args[N]=train/train_bk.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=3: args[N]=train/train_facts.txt
+
+% Welcome to the WILL ILP/SRL systems.
+
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+% Reading background theory from dir: null
+
+% Switching to VarIndicator = uppercase.
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+% [ LazyGroundClauseIndex ]  Building full index for mode/1 with 1 assertions.
+
+%  Read the facts.
+
+Encountered an exception during parsing (line #9) of file 'train/train_facts.txt': 
+edu.wisc.cs.will.FOPC_MLN_ILP_Parser.ParsingException: Unexpected token '''.  Expected ',' or ')'.
+	at edu.wisc.cs.will.FOPC_MLN_ILP_Parser.FileParser.processListOfTerms(FileParser.java:3841)
+	at edu.wisc.cs.will.FOPC_MLN_ILP_Parser.FileParser.processRestOfTerm(FileParser.java:4375)
+	at edu.wisc.cs.will.FOPC_MLN_ILP_Parser.FileParser.processRestOfTerm(FileParser.java:4239)
+	at edu.wisc.cs.will.FOPC_MLN_ILP_Parser.FileParser.processFOPC_sentenceFromThisToken(FileParser.java:4771)
+	at edu.wisc.cs.will.FOPC_MLN_ILP_Parser.FileParser.processFOPC_sentence(FileParser.java:4719)
+	at edu.wisc.cs.will.FOPC_MLN_ILP_Parser.FileParser.processFOPC_sentence(FileParser.java:4649)
+	at edu.wisc.cs.will.FOPC_MLN_ILP_Parser.FileParser.readFOPCreader(FileParser.java:924)
+	at edu.wisc.cs.will.FOPC_MLN_ILP_Parser.FileParser.readFOPCreader(FileParser.java:679)
+	at edu.wisc.cs.will.ILP.LearnOneClause.readFacts(LearnOneClause.java:2842)
+	at edu.wisc.cs.will.ILP.LearnOneClause.readFacts(LearnOneClause.java:2836)
+	at edu.wisc.cs.will.ILP.LearnOneClause.<init>(LearnOneClause.java:649)
+	at edu.wisc.cs.will.ILP.LearnOneClause.<init>(LearnOneClause.java:535)
+	at edu.wisc.cs.will.ILP.ILPouterLoop.<init>(ILPouterLoop.java:275)
+	at edu.wisc.cs.will.ILP.ILPouterLoop.<init>(ILPouterLoop.java:227)
+	at edu.wisc.cs.will.Boosting.RDN.WILLSetup.createRegressionOuterLooper(WILLSetup.java:1627)
+	at edu.wisc.cs.will.Boosting.RDN.WILLSetup.setup(WILLSetup.java:174)
+	at edu.wisc.cs.will.Boosting.Common.RunBoostedModels.setupWILLForTrain(RunBoostedModels.java:88)
+	at edu.wisc.cs.will.Boosting.Common.RunBoostedModels.learnModel(RunBoostedModels.java:78)
+	at edu.wisc.cs.will.Boosting.RDN.RunBoostedRDN.runJob(RunBoostedRDN.java:42)
+	at edu.wisc.cs.will.Boosting.Common.RunBoostedModels.main(RunBoostedModels.java:307)
+Exception in thread "main" edu.wisc.cs.will.Utils.WILLthrownError: 
+ Unable to successfully parse this file: train/train_facts.txt.
+Error message: Unexpected token '''.  Expected ',' or ')'.
+	at edu.wisc.cs.will.Utils.Utils.error(Utils.java:482)
+	at edu.wisc.cs.will.FOPC_MLN_ILP_Parser.FileParser.readFOPCreader(FileParser.java:1002)
+	at edu.wisc.cs.will.FOPC_MLN_ILP_Parser.FileParser.readFOPCreader(FileParser.java:679)
+	at edu.wisc.cs.will.ILP.LearnOneClause.readFacts(LearnOneClause.java:2842)
+	at edu.wisc.cs.will.ILP.LearnOneClause.readFacts(LearnOneClause.java:2836)
+	at edu.wisc.cs.will.ILP.LearnOneClause.<init>(LearnOneClause.java:649)
+	at edu.wisc.cs.will.ILP.LearnOneClause.<init>(LearnOneClause.java:535)
+	at edu.wisc.cs.will.ILP.ILPouterLoop.<init>(ILPouterLoop.java:275)
+	at edu.wisc.cs.will.ILP.ILPouterLoop.<init>(ILPouterLoop.java:227)
+	at edu.wisc.cs.will.Boosting.RDN.WILLSetup.createRegressionOuterLooper(WILLSetup.java:1627)
+	at edu.wisc.cs.will.Boosting.RDN.WILLSetup.setup(WILLSetup.java:174)
+	at edu.wisc.cs.will.Boosting.Common.RunBoostedModels.setupWILLForTrain(RunBoostedModels.java:88)
+	at edu.wisc.cs.will.Boosting.Common.RunBoostedModels.learnModel(RunBoostedModels.java:78)
+	at edu.wisc.cs.will.Boosting.RDN.RunBoostedRDN.runJob(RunBoostedRDN.java:42)
+	at edu.wisc.cs.will.Boosting.Common.RunBoostedModels.main(RunBoostedModels.java:307)

@@ -1,0 +1,20 @@
+{
+  "project": "iitr_teaming",
+  "published_root": "data/output",
+  "published_method_files": {
+    "M0": "data/output/teaming_uc1_m0.csv",
+    "M1": "data/output/teaming_uc1_m1.csv",
+    "M2": "data/output/teaming_uc1_m2.csv",
+    "M3": "data/output/teaming_uc1_m3.csv",
+    "M6": "data/output/teaming_uc1_m6.csv",
+    "M7": "data/output/teaming_uc1_m7.csv"
+  },
+  "quality_source_root": "data/v0_teaming",
+  "quality_summary_source": "code/compare_outputs/comparison_summary_v0.csv",
+  "fairness_source_root": "evaluation/output_v0",
+  "legacy_roots": [
+    "data/v0_teaming_paper_style",
+    "evaluation/output_v0_paper_style"
+  ],
+  "note": "Published IITR quality and fairness both come from the canonical v0 100-proposal by 46-researcher run."
+}

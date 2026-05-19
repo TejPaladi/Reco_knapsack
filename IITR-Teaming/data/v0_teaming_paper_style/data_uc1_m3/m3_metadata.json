@@ -1,0 +1,8 @@
+{
+  "method": "M3-paper-style",
+  "description": "Closest local reproduction of the older AI Magazine IITR IN-1 notebook flow. It uses legacy lexical extraction, M3 lexical threshold 0.3, and builds teams from held-out BoostSRL proposal-member predictions rather than full-slice inference.",
+  "heldout_results_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/code/boosted_results/v0_paper_style_100x46/heldout_eval/results_team.db",
+  "proposal_count": 100,
+  "anchor_researcher_count": 46,
+  "bandit_scored_pairs": 850
+}

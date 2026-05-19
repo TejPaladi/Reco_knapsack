@@ -1,0 +1,47 @@
+researcher_name,researcher_name_norm,first_name,gender_guesser_raw,gender_guesser_vote,genderize_vote,genderize_probability,sexmachine_raw,sexmachine_vote,pronoun_vote,gender,source
+Akhil Upadhyay,akhil upadhyay,akhil,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Arindam Biswas,arindam biswas,arindam,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Ashwani Kumar Sharma,ashwani kumar sharma,ashwani,andy,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Avlokita Agrawal,avlokita agrawal,avlokita,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Bijan Choudhury,bijan choudhury,bijan,mostly_male,male,unknown,,mostly_male,male,unknown,male,ensemble_majority
+Debabrata Sircar,debabrata sircar,debabrata,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Deepak Sharma,deepak sharma,deepak,mostly_male,male,unknown,,mostly_male,male,unknown,male,ensemble_majority
+E Rajasekar,e rajasekar,rajasekar,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Gaurav Raheja,gaurav raheja,gaurav,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Harsh Chauhan,harsh chauhan,harsh,andy,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Harshit Sosan Lakra,harshit sosan lakra,harshit,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Jaydev Dabas,jaydev dabas,jaydev,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Jitin Singla,jitin singla,jitin,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Krishna Mohan Poluri,krishna mohan poluri,krishna,andy,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Mahua Mukherjee,mahua mukherjee,mahua,female,female,unknown,,female,female,unknown,female,ensemble_majority
+Maya S.Nair,maya s.nair,maya,female,female,unknown,,female,female,unknown,female,ensemble_majority
+Millie Pant,millie pant,millie,female,female,unknown,,female,female,unknown,female,ensemble_majority
+N K Navani,n k navani,navani,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+P Gopinath,p gopinath,gopinath,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Partha Roy,partha roy,partha,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Poonam Choudhary,poonam choudhary,poonam,female,female,unknown,,female,female,unknown,female,ensemble_majority
+Prabhat Kumar Mandal,prabhat kumar mandal,prabhat,male,male,unknown,,male,male,unknown,male,ensemble_majority
+Prabhjot Singh Chani,prabhjot singh chani,prabhjot,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Pranita P Sarangi,pranita p sarangi,pranita,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Pravindra Kumar,pravindra kumar,pravindra,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Prince Tiwari,prince tiwari,prince,male,male,unknown,,male,male,unknown,male,ensemble_majority
+R. P. Singh,r. p. singh,singh,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Rajan Arora,rajan arora,rajan,male,male,unknown,,male,male,unknown,male,ensemble_majority
+Rajesh Kumar,rajesh kumar,rajesh,male,male,unknown,,male,male,unknown,male,ensemble_majority
+Ram Sateesh Pasupuleti,ram sateesh pasupuleti,ram,male,male,unknown,,male,male,unknown,male,ensemble_majority
+Ramasare Prasad,ramasare prasad,ramasare,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Ranjana Pathania,ranjana pathania,ranjana,female,female,unknown,,female,female,unknown,female,ensemble_majority
+Sachin Suresh Tiwari,sachin suresh tiwari,sachin,male,male,unknown,,male,male,unknown,male,ensemble_majority
+Sanjoy Ghosh,sanjoy ghosh,sanjoy,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Saptarshi Kolay,saptarshi kolay,saptarshi,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Saugata Hazra,saugata hazra,saugata,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Shailly Tomar,shailly tomar,shailly,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Shri Ram Yadav,shri ram yadav,shri,female,female,unknown,,female,female,unknown,female,ensemble_majority
+Shubhajit Sadhukhan,shubhajit sadhukhan,shubhajit,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown
+Smriti Saraswat,smriti saraswat,smriti,female,female,unknown,,female,female,unknown,female,ensemble_majority
+Soma Rohatgi,soma rohatgi,soma,female,female,unknown,,female,female,unknown,female,ensemble_majority
+Sonal Atreya,sonal atreya,sonal,female,female,unknown,,female,female,unknown,female,ensemble_majority
+Srinivas Kiran Ambatipudi,srinivas kiran ambatipudi,srinivas,male,male,unknown,,male,male,unknown,male,ensemble_majority
+Tina Pujara,tina pujara,tina,female,female,unknown,,female,female,unknown,female,ensemble_majority
+Uttam Kumar Roy,uttam kumar roy,uttam,male,male,unknown,,male,male,unknown,male,ensemble_majority
+V Devadas,v devadas,devadas,unknown,unknown,unknown,,andy,unknown,unknown,unknown,unknown

@@ -1,0 +1,6 @@
+setParam: stringsAreCaseSensitive = true.
+
+usePrologVariables: true.
+
+
+team(_, _, 0) /* #neg=11,446 #pos=5,723 */ .

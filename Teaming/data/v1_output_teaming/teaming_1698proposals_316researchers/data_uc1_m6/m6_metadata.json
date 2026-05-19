@@ -1,0 +1,15 @@
+{
+  "method": "M6",
+  "description": "Exact anchor-fixed knapsack baseline on top of the M1 lexical matching pipeline. Proposal-specific pseudo skills from string matching define the candidate coverage map, the top lexical shortlist is filtered first, the anchor researcher is mandatory, and the solver maximizes distinct matched proposal-skill coverage under the team-size budget while expanding an exact frontier of recursively excluded subproblems to surface more diverse exact variants.",
+  "skeleton_file": "/Users/tej/Desktop/Recommendation_Projects/Teaming/data/v1_output_teaming/teaming_1698proposals_316researchers/teaming_uc1_m3.csv",
+  "proposal_skills_file": "/Users/tej/Desktop/Recommendation_Projects/Teaming/data/v1_output_teaming/teaming_1698proposals_316researchers/data_uc1_m1/m1_proposal_skills.csv",
+  "pseudo_skills_file": "/Users/tej/Desktop/Recommendation_Projects/Teaming/data/v1_output_teaming/teaming_1698proposals_316researchers/data_uc1_m1/m1_pseudo_researcher_skills.csv",
+  "team_size": 5,
+  "num_teams_requested": 10,
+  "max_exclusion_order": 4,
+  "lexical_shortlist": 30,
+  "rows_written": 87264,
+  "proposal_count": 432,
+  "anchor_researcher_count": 202,
+  "round_digits": 4
+}

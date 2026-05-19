@@ -1,0 +1,8 @@
+,M0_random,M1_string,M3_boosted,Knapsack_01,dynamic_knapsack,dynamic_knapsack_v2,dynamic_knapsack_Marginal_Utility
+M0_random,-,0.1%,0.0%,7.0%,0.8%,0.0%,0.0%
+M1_string,99.9%,-,8.1%,93.4%,23.8%,53.2%,0.0%
+M3_boosted,100.0%,91.9%,-,99.3%,39.1%,95.9%,0.0%
+Knapsack_01,93.0%,6.6%,0.7%,-,1.7%,3.3%,0.0%
+dynamic_knapsack,99.2%,76.2%,60.9%,98.3%,-,89.8%,59.3%
+dynamic_knapsack_v2,100.0%,46.8%,4.1%,96.7%,10.2%,-,0.0%
+dynamic_knapsack_Marginal_Utility,100.0%,100.0%,100.0%,100.0%,40.7%,100.0%,-

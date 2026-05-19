@@ -1,0 +1,14 @@
+setParam: loadAllBasicModes=false.
+setParam: loadAllLibraries=false.
+setParam: maxTreeDepth=100.
+setParam: nodeSize=2.
+setParam: numOfClauses=10.
+setParam: numOfCycles=20.
+
+// predicate declarations
+
+mode: team(+user_id, +item_id).
+mode: skill(+user_id, -value).
+mode: skill(+user_id, +value).
+mode: interest(+item_id, -value).
+mode: interest(+item_id, +value).

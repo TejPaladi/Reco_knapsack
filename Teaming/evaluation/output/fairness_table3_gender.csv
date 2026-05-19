@@ -1,0 +1,6 @@
+Metric,M0: Random baseline,M1: String / lexical matching,M2: Semantic mapper matching,M3: BoostSRL / relational learning,M6: Exact knapsack coverage,M7: Marginal-utility knapsack
+SP,0.0496,0.0888,0.028,0.002,0.0262,0.0211
+CSP,0.0513,0.0884,0.0314,0.0371,0.029,0.0362
+EO,0.051,0.0876,0.0271,0.0246,0.0255,0.0662
+PRP,0.0031,0.4251,0.0012,0.0444,0.0076,0.0905
+TE,0.2954,116617.49,0.2314,0.9262,1.1633,5.3143

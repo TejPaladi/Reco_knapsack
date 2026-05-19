@@ -1,0 +1,78 @@
+,meal_name,categories
+0,Coffee,{'Beverage'}
+1,Tea,{'Beverage'}
+2,Orange Juice,{'Beverage'}
+3,Cola,{'Beverage'}
+4,Water,{'Beverage'}
+5,Milk,"{'Beverage', 'Breakfast Item'}"
+6,Smoothie,{'Beverage'}
+7,Lemonade,{'Beverage'}
+8,Iced Tea,{'Beverage'}
+9,Hot Chocolate,"{'Beverage', 'Dessert'}"
+10,Apple Juice,{'Beverage'}
+11,Pepsi,{'Beverage'}
+12,Cappuccino,{'Beverage'}
+13,Green Tea,{'Beverage'}
+14,Ginger Ale,{'Beverage'}
+15,Iced Coffee,{'Beverage'}
+16,Chai Latte,{'Beverage'}
+17,Cranberry Juice,{'Beverage'}
+18,Sprite,{'Beverage'}
+19,Hot Tea,{'Beverage'}
+20,Fruit Punch,{'Beverage'}
+21,Almond Milk,"{'Beverage', 'Breakfast Item'}"
+22,Coconut Water,{'Beverage'}
+23,Espresso,{'Beverage'}
+24,Tomato Juice,"{'Beverage', 'Appetizer'}"
+25,Cheesy Gordita Crunch Copycat,{'Main Course'}
+26,Crunchwrap Supreme Copycat,{'Main Course'}
+27,Quesadilla Copycat,"{'Appetizer', 'Main Course'}"
+28,Bean Burrito Copycat,{'Main Course'}
+29,Black Bean Chalupa Copycat,{'Main Course'}
+30,Crunchy Taco,{'Main Course'}
+31,Soft Taco Beef,{'Main Course'}
+32,Nacho Bell Grande Beef,"{'Appetizer', 'Main Course'}"
+33,Veggie Power Bowl,"{'Salad', 'Main Course'}"
+34,Cheesy Bean Rice Burrito,{'Main Course'}
+35,Apple Pie,{'Dessert'}
+36,Quarter Pounder,{'Main Course'}
+37,Blt Quarter Punder,"{'Side', 'Main Course'}"
+38,Sweet Tea,{'Beverage'}
+39,Mcdonaldâ€™s Bacon Ranch Mccrispy,{'Main Course'}
+40,Big Mac,{'Main Course'}
+41,Breakfast Burrito,"{'Breakfast Item', 'Main Course'}"
+42,Caramel Cappucino,"{'Beverage', 'Dessert'}"
+43,Maple Oatmeal,"{'Main Course', 'Breakfast Item'}"
+44,Egg Mcmuffin,"{'Main Course', 'Breakfast Item'}"
+45,Mcgriddle,"{'Main Course', 'Breakfast Item'}"
+46,Egg Drop Chicken Noodle Soup,"{'Main Course', 'Soup'}"
+47,My Scotch Eggs,"{'Main Course', 'Breakfast Item'}"
+48,Egg In An Avocado Hole,"{'Main Course', 'Breakfast Item'}"
+49,Delicious Chocolate Bark Recipe,{'Dessert'}
+50,Bacon Candy,"{'Side', 'Dessert'}"
+51,Bacon And Egg Pie,"{'Main Course', 'Breakfast Item'}"
+52,How To Make Egg Salad,"{'Salad', 'Side'}"
+53,Peekaboo Sugar Eggs,{'Dessert'}
+54,Egg Bundles,"{'Breakfast Item', 'Side', 'Main Course'}"
+55,Cadbury Creme Egg Rolls,{'Dessert'}
+56,Mini Egg Pie,"{'Breakfast Item', 'Dessert'}"
+57,2 Ingredient Avocado Egg Salad,"{'Salad', 'Side'}"
+58,How To Make Egg Omelettes,"{'Main Course', 'Breakfast Item'}"
+59,Bunny Egg Salad,"{'Salad', 'Side'}"
+60,Deviled Egg Salad,"{'Side', 'Salad', 'Appetizer'}"
+61,Dinosaur Inspired By Mikeasaurus,"{'Side', 'Dessert', 'Appetizer'}"
+62,Bacon Asparagus And Egg Bake,"{'Breakfast Item', 'Side', 'Main Course'}"
+63,How To Make Chinese Egg Tarts,{'Dessert'}
+64,Egg Filled Bread Roll,"{'Main Course', 'Breakfast Item'}"
+65,Chocolate Peanut Butter,{'Dessert'}
+66,Supremely Spicy Scrambled Eggs,"{'Main Course', 'Breakfast Item'}"
+67,Peekaboo Sugar,{'Dessert'}
+68,Eggs And Bacon The Perfect Quick Paleo Meal,"{'Main Course', 'Breakfast Item'}"
+69,Bakedfriedpan Fried Scotch Egg,"{'Breakfast Item', 'Side', 'Main Course'}"
+70,Deviled Eggs With Smoked Salmon And Capers,"{'Appetizer', 'Side'}"
+71,Baklava,{'Dessert'}
+72,German Rhubarb Cake With Meringue Topping (omas Rhabarberkuchen Mit Baiser),{'Dessert'}
+73,Honey Vanilla Almond Cake,{'Dessert'}
+74,Caramel Nut Tart,{'Dessert'}
+75,Lite Fried Okra,"{'Appetizer', 'Side'}"
+76,Pumpkin Soup,"{'Main Course', 'Soup'}"

@@ -1,0 +1,10 @@
+Method,Average goodness,Average volume
+M0_random,0.1354 ± 0.0362,10.0
+M1_string,0.5500 ± 0.0762,10.0
+M3_boosted,0.6153 ± 0.0334,9.4
+Knapsack_01,0.3670 ± 0.1274,10.0
+hybrid_kn_m1,0.3753 ± 0.1117,9.1
+dynamic_knapsack,0.5638 ± 0.1425,10.0
+weighted_dynamic_knapsack,0.5638 ± 0.1425,10.0
+Beam_dynamic_knapsack,0.5638 ± 0.1425,10.0
+gls,0.6024 ± 0.0647,10.0

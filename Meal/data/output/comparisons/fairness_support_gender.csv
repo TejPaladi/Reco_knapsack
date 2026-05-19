@@ -1,0 +1,6 @@
+Method,Method_name,best_goodness_mean,predicted_positive_rate,actual_positive_rate,predicted_positive_count,actual_positive_count,male_predicted_positive_rate,female_predicted_positive_rate
+M0,Random baseline,0.8521,0.1688,0.2727,26,42,0.1286,0.2024
+M1,Sequential greedy,0.8777,0.3312,0.2727,51,42,0.2857,0.369
+M3,Boosted Bandit,0.8475,0.1688,0.2727,26,42,0.1286,0.2024
+M6,Knapsack,0.8776,0.2727,0.2727,42,42,0.2429,0.2976
+M7,Marginal Utility,0.8729,0.4805,0.2727,74,42,0.4714,0.4881

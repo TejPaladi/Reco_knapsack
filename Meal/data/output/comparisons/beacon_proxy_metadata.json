@@ -1,0 +1,31 @@
+{
+  "profile": "beacon_proxy",
+  "description": "Closest BEACON-style proxy supported by the current category-only meal dataset: dm_proxy = unique_items/total_items, mc_proxy = covered_required_categories/required_categories, uc_proxy = average per-item positive alignment, goodness = (dm_proxy + mc_proxy + uc_proxy) / 3.",
+  "source_root": "/Users/tej/Desktop/Recommendation_Projects/Meal/data/output_legacy_metric",
+  "output_root": "/Users/tej/Desktop/Recommendation_Projects/Meal/data/output",
+  "meals_file": "/Users/tej/Desktop/Recommendation_Projects/Meal/data/input_data/meal_categories.csv",
+  "methods": {
+    "M0": {
+      "name": "Random baseline",
+      "filename": "meal_uc1_m0.csv"
+    },
+    "M1": {
+      "name": "Sequential greedy",
+      "filename": "meal_uc1_m1.csv"
+    },
+    "M3": {
+      "name": "Boosted Bandit",
+      "filename": "meal_uc1_m2.csv"
+    },
+    "M6": {
+      "name": "Knapsack",
+      "filename": "meal_uc1_m3.csv"
+    },
+    "M7": {
+      "name": "Marginal Utility",
+      "filename": "meal_uc1_m4.csv"
+    }
+  },
+  "source_stage_note": "These published proxy outputs are computed by rescoring internally generated source bundles. The source-generation directory may be temporary and may not be retained in the GitHub-facing release.",
+  "source_root_retained": false
+}

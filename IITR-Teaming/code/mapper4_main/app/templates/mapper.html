@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Mapper
+</title>
+<style>
+    /* table, th, td {
+      border:1px solid black;
+      text-align: center;
+    } */
+    table
+{
+  position:absolute;
+  top: 3.5cm;
+  right: 2.5cm; 
+  text-align: center;
+}
+    
+.centerv {
+  text-align: center;
+  color: rgb(153, 41, 41);
+}
+.left {
+  text-align: left;
+}
+.center {
+  color: green;
+  text-align: center;
+  position:absolute;
+  top: 2cm;
+  right: 8.5cm;
+}
+.centerf {
+  color: red;
+  text-align: center;
+  position:absolute;
+  top: 2cm;
+  right: 3.6cm;
+}
+.centers {
+  color: green;
+  text-align: center;
+  position:absolute;
+  top: 3cm;
+  right: 6cm;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 30px;
+}
+.centert {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+
+
+<body>  
+
+
+<h1 class=" centerv">Text to Classification Mapper</h1>
+
+<form name ="map" action="." method ="post">
+   {% if itext %}
+    <input type="text" name="inputtext" value = "{{itext}}" >
+    {% endif %}
+    {% if itext == NULL %}
+     <input type="text" name="inputtext"  value = "artificial intelligence" >
+     {% endif %} 
+    <h3>Enter text here</h3>
+    <br>
+    {% if itresh %}
+    <input type="number" name="threshold" value = "{{itresh}}" >
+    {% endif %}
+    {% if itresh == NULL %}
+    <input type="number" name="threshold" value = 65 >
+    {% endif %} 
+    <h3>Enter matching threshold</h3>
+    <br>
+    <h3>Select Tree for Classification</h3>
+    <input type="radio" id="acm" name="tree" value="acm" checked>
+    <label for="acm">ACM</label><br>
+    <input type="radio" id="jel" name="tree" value="jel">
+    <label for="jel">JEL</label>
+    <br><br>
+    <input type="submit" value="Find Concepts"> 
+   
+    </form>
+    <script>
+     function getVal() {
+  const val = document.querySelector('input').value;
+  console.log(val);
+}
+    </script>
+    {% if score %}
+    <!-- <h3 class = center>Input text - {{input}}</h3> -->
+    
+    <!-- <h2 class = center>Score</h2> -->
+    <h3 class = center>Score - {{score}}</h3>
+    <br>
+     <table border="1" 
+            align="right"> 
+      <tr>
+      
+        <th><h3>Code</h3></th>
+       
+        <th><h3>Description</h3></th>
+      </tr>
+      
+       {% for i in length %} 
+      
+        <tr>
+         
+          <td><h3>{{term[i]}}</h3></td>
+          <td>
+            
+             {% for j in termslist[i] %} 
+            
+             <h3 class = "left">{{j}}</h3>
+             
+             {% endfor %}
+            
+          </td>
+         
+         
+        </tr>
+           
+        {% endfor %}
+      
+      </table>
+     
+      {% endif %}
+       
+    {% if full%}
+
+      <h3 class = centerf>Could not find any match with the given Input text and Threshold - Displaying the entire tree</h3>
+    <br>
+     <table border="1" 
+            align="right"> 
+      <tr>
+      
+        <th><h3>Code</h3></th>
+       
+        <th><h3>Description</h3></th>
+      </tr>
+      
+       {% for i in flength %} 
+      
+        <tr>
+         
+          <td><h3>{{fterm[i]}}</h3></td>
+          <td>
+            
+             {% for j in ftermslist[i] %} 
+            
+             <h3 class = "left">{{j}}</h3>
+             
+             {% endfor %}
+            
+          </td>
+         
+         
+        </tr>
+           
+        {% endfor %}
+      
+      </table>
+      {% endif %}
+     
+
+
+</body>
+</html>

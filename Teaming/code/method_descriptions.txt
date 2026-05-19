@@ -1,0 +1,36 @@
+USE CASE 1 DETAILS:
+
+M0 - Random Matching
+Given a researcher's name, show a list of randomly selected proposals and candidate teams, irrespective of relevance or any skillset requirements.
+
+M1 - String Matching
+Given a researcher's name, use string matching to select proposals and form candidate teams. If a proposal's requirements are directly matched (or within a threshold) with a researcher's interests, then that proposal is deemed to be a good fit for the researcher. Similarly, gather candidate team members and form teams by matching their interests with the ones mentioned in the proposal.
+
+M2 - Mapper Matching
+Given a researcher's name, use a ACM/JEL's ontology classification guide to select proposals and form candidate teams. Unlike methods such as string matching, mapper matching also allows for semantic meanings to take place. (E.g., our mapper recognizes that "machine learning" and "language models" are similar in domains.)
+
+------
+
+USE CASE 2 DETAILS:
+
+M0 - Random Matching
+Given a proposal, show a list of randomly candidate teams, irrespective of relevance or any skillset requirements.
+
+M1 - String Matching
+Given a proposal, use string matching to form candidate teams. If a proposal's requirements are directly matched (or within a threshold) with a researcher's interests, then that proposal is deemed to be a good fit for the researcher. Similarly, gather candidate team members and form teams by matching their interests with the ones mentioned in the proposal.
+
+M2 - Mapper Matching
+Given a proposal, use a ACM/JEL's ontology classification guide to form candidate teams. Unlike methods such as string matching, mapper matching also allows for semantic meanings to take place. (E.g., our mapper recognizes that "machine learning" and "language models" are similar in domains.)
+
+------
+
+USE CASE 3 DETAILS:
+
+M0 - Random Matching
+Given a research interest, show a list of randomly selected proposals and candidate teams, irrespective of relevance or any skillset requirements.
+
+M1 - String Matching
+Given a research interest, use string matching to select proposals and form candidate teams. If a proposal's requirements are directly matched (or within a threshold) with a researcher's interests, then that proposal is deemed to be a good fit for the researcher. Similarly, gather candidate team members and form teams by matching their interests with the ones mentioned in the proposal.
+
+M2 - Mapper Matching
+Given a research interest, use a ACM/JEL's ontology classification guide to select proposals and form candidate teams. Unlike methods such as string matching, mapper matching also allows for semantic meanings to take place. (E.g., our mapper recognizes that "machine learning" and "language models" are similar in domains.)

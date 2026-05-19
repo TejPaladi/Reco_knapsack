@@ -1,0 +1,3209 @@
+% Running on host: Tejs-MacBook-Air
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+
+% Calling ILPouterLoop from createRegressionOuterLooper.
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=0: args[N]=train/train_pos.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=1: args[N]=train/train_neg.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=2: args[N]=train/train_bk.txt
+
+% getInputArgWithDefaultValue: args=[train/train_pos.txt, train/train_neg.txt, train/train_bk.txt, train/train_facts.txt]
+%  for N=3: args[N]=train/train_facts.txt
+
+% Welcome to the WILL ILP/SRL systems.
+
+
+% Switching to VarIndicator = uppercase.
+
+% Unset'ing VarIndicator.
+% Reading background theory from dir: null
+% Load '../teams_bk.txt'.
+
+% Switching to VarIndicator = uppercase.
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+
+***** Warning: % Since this is the first setting of the notation for variables, will keep:
+%   variableIndicator = uppercase *****
+
+% [ LazyGroundClauseIndex ]  Building full index for mode/1 with 1 assertions.
+
+%  Read the facts.
+%  Have read 9,364 facts.
+% Have read 5,723 examples from 'train' [train/train*].
+% Have read 11,446 examples from 'train' [train/train*].
+
+%  LearnOneClause initialized.
+
+% The outer looper has been created.
+
+% Initializing the ILP inner looper.
+
+% NEW target:                 team(A, B)
+%  targetPred:                team/2
+%  targetArgTypes:            signature = [const, const], types = [+pid, +name]
+%  targets:                   [team(A, B)]
+%  targetPredicates:          [team/2]
+%  targetArgSpecs:            [[A[+pid], B[+name]]]
+%  variablesInTargets:        [[A, B]]
+
+% Started collecting constants
+
+% Collecting the types of constants.
+
+% Looking at the training examples to see if any types of new constants can be inferred.
+% Time to collect constants: 75 milliseconds
+% Time to collect examples: 0 seconds
+
+% Read 5,723 pos examples and 11,446 neg examples.
+% Time to init learnOneClause: 78 milliseconds
+% Old dirnull
+Setting model dir
+
+% Have 5,723 'raw' positive examples and kept 5,723.
+% Have 11,446 'raw' negative examples and kept 11,446.
+
+% processing backup's for team
+%  POS EX = 5,723
+%  NEG EX = 11,446
+
+% Memory usage by WILLSetup (just counts # targets?):
+%  |backupPosExamples| = 1
+%  |backupNegExamples| = 1
+%  |predicatesAsFacts| = 0
+%  |addedToFactBase|   = 0
+train/models/
+File: train/advice.txt doesnt exist.Hence no advice loaded
+% Learning 20 trees in this iteration for team
+
+% Learn model for: team
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.2222222222222222
+Set score:0.0025
+% Dataset size: 17,169
+Computing probabilities
+prob time:3 milliseconds
+No hidden examples for : team
+Time to build dataset: 9 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.22222222222196059
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 3182 4966 6013 8798 9347 9864 13264 13858 16003 16733
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% LearnOneClause Parameters:
+%   Targets (1):
+%    team(+pid, +name)
+%  Modes (4):
+%    skill(+pid, -value),
+%    skill(+pid, +value),
+%    interest(+name, -value),
+%    interest(+name, +value)
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for skill/2.
+% [ LazyGroundNthArgumentClauseIndex ]  Argument 0:  Building full index for interest/2.
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundClauseIndex ]  Building full index for interest/2 with 6,921 assertions.
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+% [ LazyGroundClauseIndex ]  Building full index for skill/2 with 2,443 assertions.
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: -3.1433008107355373E-14 to score=0.0025 #egs=2756.0
+Comparing variance: 0.1634792040800032 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 810 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 10 positive seeds: 695 2018 2114 2800 2852 4582 6081 6572 6620 7735
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon61), interest(B, Anon61))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #1 @ 18:20:06 3/25/26.  [Using 16,279,248 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.8581489350995072;  // std dev = 0.000, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.06400475970229626;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.8581489350995072) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.06400475970229626) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.8581489350995072) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar1),
+   interest(b, uniqueVar1),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.06400475970229626) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar1)
+%   skill(a, uniqueVar1)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 1 trees is 1.103 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.1634792040800032
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:27 milliseconds
+No hidden examples for : team
+Time to build dataset: 748 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.19654979333265707
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 1769 3726 4164 4264 5166 9351 11074 12245 12965 14403
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: 7.210616557960262E-14 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407975566 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 542 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 10 positive seeds: 111 354 382 483 555 821 3802 4013 4177 4571
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon409), interest(B, Anon409))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #2 @ 18:20:07 3/25/26.  [Using 19,171,496 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.7194734122109042;  // std dev = 1.41e-05, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.0560334964523899;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.7194734122109042) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.0560334964523899) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.7194734122109042) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar2),
+   interest(b, uniqueVar2),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.0560334964523899) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar2)
+%   interest(b, uniqueVar2)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 2 trees is 2.678 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.1634792040797557
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:46 milliseconds
+No hidden examples for : team
+Time to build dataset: 772 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.17182263855426094
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 8 positive seeds: 9 491 742 2878 6264 6347 10017 14130
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: 2.6730432091294334E-14 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407978284 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 484 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 9 positive seeds: 2318 3021 5586 6890 8084 9731 11720 13709 14255
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon757), interest(B, Anon757))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #3 @ 18:20:09 3/25/26.  [Using 21,985,440 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.5553664367462867;  // std dev = 8.58e-06, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.048755289905494326;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.5553664367462867) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.048755289905494326) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.5553664367462867) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar3),
+   interest(b, uniqueVar3),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.048755289905494326) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar3)
+%   skill(a, uniqueVar3)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 3 trees is 4.218 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.16347920407978284
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:67 milliseconds
+No hidden examples for : team
+Time to build dataset: 805 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.15621973183360494
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 4 positive seeds: 2178 5260 6987 14138
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: 1.654151738982875E-14 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407994926 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 484 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 9 positive seeds: 1027 1930 1961 3692 4119 5589 9516 12519 13173
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon1105), interest(B, Anon1105))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #4 @ 18:20:10 3/25/26.  [Using 22,088,800 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.4175135841583154;  // std dev = 6.75e-06, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.042190668450419244;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.4175135841583154) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.042190668450419244) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.4175135841583154) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar4),
+   interest(b, uniqueVar4),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.042190668450419244) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar4)
+%   interest(b, uniqueVar4)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 4 trees is 5.820 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.1634792040799493
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:89 milliseconds
+No hidden examples for : team
+Time to build dataset: 823 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.14813496847453597
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 7 positive seeds: 129 4135 4355 7216 10370 10406 10556
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: -6.70323335622736E-15 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407981106 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 493 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 7 positive seeds: 346 1175 4182 5976 8786 10150 14189
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon1453), interest(B, Anon1453))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #5 @ 18:20:12 3/25/26.  [Using 22,074,088 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.3207118471601672;  // std dev = 0.000, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.03633341052216764;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.3207118471601672) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.03633341052216764) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.3207118471601672) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar5),
+   interest(b, uniqueVar5),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.03633341052216764) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar5)
+%   skill(a, uniqueVar5)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 5 trees is 7.486 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.1634792040798111
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:112 milliseconds
+No hidden examples for : team
+Time to build dataset: 844 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.14399960533583805
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 4223 5686 6791 8536 9028 9975 12551 13051 13966 14094
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: 1.2272073375247014E-15 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407985164 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 491 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 5 positive seeds: 2023 2853 3347 4852 7934
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon1801), interest(B, Anon1801))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #6 @ 18:20:14 3/25/26.  [Using 22,269,432 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.2551722425694972;  // std dev = 1.84e-06, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.03115663712846783;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.2551722425694972) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.03115663712846783) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.2551722425694972) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar6),
+   interest(b, uniqueVar6),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.03115663712846783) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar6)
+%   skill(a, uniqueVar6)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 6 trees is 9.174 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.16347920407985164
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:135 milliseconds
+No hidden examples for : team
+Time to build dataset: 866 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.14175686378431923
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 1949 6660 9858 10359 10442 12835 13421 14058 14896 16403
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #7 @ 18:20:15 3/25/26.  [Using 21,665,920 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   return 0;  // std dev = 0.377, 17,169.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=5,723 */
+
+
+% Clauses:
+
+team(A, B, 0) :- !. // Clause #1.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(underscore, underscore, 0) :-  /* #neg=11,446 #pos=5,723 */ 
+   !. // Flattened version of clause #1.
+
+
+% The unique flattened literals:
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 7 trees is 10.494 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.14175686378431923
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:138 milliseconds
+No hidden examples for : team
+Time to build dataset: 856 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.14175686378431923
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 8 positive seeds: 153 6450 7055 7064 13492 14636 15443 15727
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: 3.0319240103551446E-15 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407987143 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 499 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 10 positive seeds: 1581 2536 5369 6496 6794 8172 8311 9388 10313 10726
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon2293), interest(B, Anon2293))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #8 @ 18:20:17 3/25/26.  [Using 22,535,112 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.20975771563253667;  // std dev = 2.89e-06, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.026618867979030486;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.20975771563253667) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.026618867979030486) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.20975771563253667) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar7),
+   interest(b, uniqueVar7),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.026618867979030486) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar7)
+%   interest(b, uniqueVar7)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 8 trees is 12.242 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.16347920407987143
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:158 milliseconds
+No hidden examples for : team
+Time to build dataset: 989 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.14045080545386585
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 8 positive seeds: 1870 3243 3778 4110 9305 12868 13192 15783
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: 3.712560012679769E-15 to score=0.0025 #egs=2756.0
+Comparing variance: 0.163479204079939 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 496 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 9 positive seeds: 2978 4455 4985 5696 6626 7207 9906 12527 12673
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon2641), interest(B, Anon2641))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #9 @ 18:20:19 3/25/26.  [Using 22,549,960 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.17709649774526845;  // std dev = 3.20e-06, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.022669449513320592;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.17709649774526845) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.022669449513320592) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.17709649774526845) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar8),
+   interest(b, uniqueVar8),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.022669449513320592) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar8)
+%   interest(b, uniqueVar8)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 9 trees is 14.134 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.163479204079939
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:181 milliseconds
+No hidden examples for : team
+Time to build dataset: 997 milliseconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13963851588377713
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 1794 2668 2960 4409 4705 4774 5572 9305 12019 14372
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: -3.093800010566474E-15 to score=0.0025 #egs=2756.0
+Comparing variance: 0.1634792040797888 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 484 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 7 positive seeds: 1491 1828 3081 4099 4409 6589 8450
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon2989), interest(B, Anon2989))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #10 @ 18:20:21 3/25/26.  [Using 22,545,232 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.1527438580936819;  // std dev = 0.000, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.019253049325028013;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.1527438580936819) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.019253049325028013) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.1527438580936819) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar9),
+   interest(b, uniqueVar9),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.019253049325028013) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar9)
+%   interest(b, uniqueVar9)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Saving model in: train/models/bRDNs/team.model
+% Time taken to learn 10 trees is 16.032 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.1634792040797888
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:204 milliseconds
+No hidden examples for : team
+Time to build dataset: 1 seconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13910381741574324
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 8 positive seeds: 2166 2994 5062 5070 5920 6527 9285 9456
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: -2.0290171735965124E-15 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407993277 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 497 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 10 positive seeds: 578 1252 2333 2626 2750 4806 4863 6947 7833 8145
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon3337), interest(B, Anon3337))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree Combined @ 18:20:22 3/25/26.  [Using 22,556,368 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.1340070300080171;  // std dev = 0.000, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.01631313131840281;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.1340070300080171) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.01631313131840281) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.1340070300080171) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar10),
+   interest(b, uniqueVar10),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.01631313131840281) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar10)
+%   interest(b, uniqueVar10)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 11 trees is 17.993 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.16347920407993277
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:227 milliseconds
+No hidden examples for : team
+Time to build dataset: 1 seconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13873449211348288
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 246 880 3165 5515 6941 9162 14256 15820 15937 16688
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: -1.1782221706907322E-15 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407985875 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 470 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 8 positive seeds: 5185 5879 7811 10037 10958 11925 12620 12707
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon3685), interest(B, Anon3685))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #12 @ 18:20:24 3/25/26.  [Using 23,862,800 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.11920380823128676;  // std dev = 0.000, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.01379446909733879;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.11920380823128676) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.01379446909733879) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.11920380823128676) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar11),
+   interest(b, uniqueVar11),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.01379446909733879) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar11)
+%   interest(b, uniqueVar11)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 12 trees is 19.960 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.16347920407985878
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:247 milliseconds
+No hidden examples for : team
+Time to build dataset: 1 seconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13846879371299062
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 438 2838 4872 6351 7197 7361 8116 8672 10036 10237
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: 5.388368351736609E-16 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407981728 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 474 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 10 positive seeds: 2274 3893 4926 6940 7186 7316 8313 10925 11873 14267
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon4033), interest(B, Anon4033))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #13 @ 18:20:26 3/25/26.  [Using 23,856,760 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.10724508452246982;  // std dev = 1.22e-06, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.011644831779764336;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.10724508452246982) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.011644831779764336) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.10724508452246982) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar12),
+   interest(b, uniqueVar12),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.011644831779764336) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar12)
+%   interest(b, uniqueVar12)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 13 trees is 21.948 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.1634792040798173
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:267 milliseconds
+No hidden examples for : team
+Time to build dataset: 1 seconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13827093965433437
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 1397 2504 4589 5337 6457 7229 8054 11727 12854 12907
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: -5.581730852397013E-16 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407978359 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 474 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 10 positive seeds: 143 1860 2097 2815 3350 3843 4146 5647 6374 7120
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon4381), interest(B, Anon4381))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #14 @ 18:20:29 3/25/26.  [Using 23,852,584 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.09740112745501332;  // std dev = 0.000, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.009816004618169004;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.09740112745501332) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.009816004618169004) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.09740112745501332) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar13),
+   interest(b, uniqueVar13),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.009816004618169004) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar13)
+%   interest(b, uniqueVar13)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 14 trees is 23.998 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.1634792040797836
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:285 milliseconds
+No hidden examples for : team
+Time to build dataset: 1 seconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13811923077050525
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 5517 8875 11369 11687 13324 15323 15432 15486 16097 16595
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #15 @ 18:20:30 3/25/26.  [Using 23,249,304 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   return 0;  // std dev = 0.372, 17,169.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=5,723 */
+
+
+% Clauses:
+
+team(A, B, 0) :- !. // Clause #1.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(underscore, underscore, 0) :-  /* #neg=11,446 #pos=5,723 */ 
+   !. // Flattened version of clause #1.
+
+
+% The unique flattened literals:
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 15 trees is 25.686 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13811923077050525
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:286 milliseconds
+No hidden examples for : team
+Time to build dataset: 1 seconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13811923077050525
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 176 579 2372 2732 2770 4022 4833 5130 5851 6444
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: -8.224351694755876E-16 to score=0.0025 #egs=2756.0
+Comparing variance: 0.1634792040797963 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 485 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 5 positive seeds: 1837 3238 5721 9217 13852
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon4873), interest(B, Anon4873))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #16 @ 18:20:32 3/25/26.  [Using 23,860,112 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.08916756606307503;  // std dev = 0.000, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.008264304402029153;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.08916756606307503) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.008264304402029153) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.08916756606307503) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar14),
+   interest(b, uniqueVar14),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.008264304402029153) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar14)
+%   interest(b, uniqueVar14)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 16 trees is 27.772 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.16347920407979633
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:313 milliseconds
+No hidden examples for : team
+Time to build dataset: 1 seconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13799997500091993
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 8 positive seeds: 2328 3099 4993 5968 9306 10410 10866 16318
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: 3.6996691793024083E-16 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407981678 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 467 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 10 positive seeds: 1850 3411 8286 8535 8834 9220 9910 10434 11796 12187
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon5221), interest(B, Anon5221))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #17 @ 18:20:34 3/25/26.  [Using 23,932,920 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.08218604818271232;  // std dev = 1.01e-06, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.006950730882161809;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.08218604818271232) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.006950730882161809) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.08218604818271232) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar15),
+   interest(b, uniqueVar15),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.006950730882161809) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar15)
+%   interest(b, uniqueVar15)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 17 trees is 29.902 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.16347920407981678
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:340 milliseconds
+No hidden examples for : team
+Time to build dataset: 1 seconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13790422503659944
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 4325 4987 5442 5472 7932 9486 9702 10571 11494 11515
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: 5.478604185378131E-16 to score=0.0025 #egs=2756.0
+Comparing variance: 0.1634792040797868 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 472 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 10 positive seeds: 285 3850 4350 5008 6230 6252 6616 7419 9483 10024
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon5569), interest(B, Anon5569))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #18 @ 18:20:37 3/25/26.  [Using 24,000,928 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.07619570198076582;  // std dev = 1.23e-06, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.005840870232085366;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.07619570198076582) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.005840870232085366) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.07619570198076582) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar16),
+   interest(b, uniqueVar16),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.005840870232085366) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar16)
+%   interest(b, uniqueVar16)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 18 trees is 32.070 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.1634792040797868
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:360 milliseconds
+No hidden examples for : team
+Time to build dataset: 1 seconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13782594948529675
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 127 706 1400 2819 5679 6578 7408 8320 8551 10074
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: -8.050325444161512E-16 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407992295 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 481 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 9 positive seeds: 637 1187 2402 2553 5723 7966 8020 10145 11994
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon5917), interest(B, Anon5917))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #19 @ 18:20:39 3/25/26.  [Using 24,015,584 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.07100250423444769;  // std dev = 0.000, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.004904640813400101;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.07100250423444769) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.004904640813400101) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.07100250423444769) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar17),
+   interest(b, uniqueVar17),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.004904640813400101) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar17)
+%   interest(b, uniqueVar17)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Time taken to learn 19 trees is 34.292 seconds.
+
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.16347920407992297
+Set score:0.0025
+% Only 17169 out of 17169 converged.
+% Kept 5,723 of the 5,723 positive examples.
+% Kept 11,446 of the 11,446 negative examples.
+% Dataset size: 17,169
+Computing probabilities
+prob time:385 milliseconds
+No hidden examples for : team
+Time to build dataset: 1 seconds
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:0.13776096771964003
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 131 900 1559 1573 1754 2548 3002 3881 4539 4939
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -2,356.225770): team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -2,356.225770 (regressionFit = 2,356.225768, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- interest(B, C), skill(A, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 17,169.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+Comparing variance: 6.432525855302794E-16 to score=0.0025 #egs=2756.0
+Comparing variance: 0.16347920407981745 to score=0.0025 #egs=14413.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 14,413.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-0.163479)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -0.163479) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 463 milliseconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 2,756.0/17,169.0 pos, 0.0/0.0 neg]
+% This clause covers 2756 positive examples, of which 2756 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 10 positive seeds: 187 613 919 4428 5725 6648 7611 8079 8555 13526
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 3, |OPEN| = 0.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- interest(B, _), skill(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(_, A) :- interest(A, _), interest(A, _).  [covers 14,413.0/14,413.0 pos, 0.0/0.0 neg]
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon6265), interest(B, Anon6265))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree #20 @ 18:20:41 3/25/26.  [Using 24,021,728 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.0664593887874602;  // std dev = 1.33e-06, 2,756.000 (wgt'ed) examples reached here.  /* #pos=2,756 */
+%   else return 0.004115948376396468;  // std dev = 0.404, 14,413.000 (wgt'ed) examples reached here.  /* #neg=11,446 #pos=2,967 */
+
+
+% Clauses:
+
+team(A, B, 0.0664593887874602) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.004115948376396468) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.0664593887874602) :-  /* #pos=2,756 */ 
+   skill(a, uniqueVar18),
+   interest(b, uniqueVar18),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.004115948376396468) :-  /* #neg=11,446 #pos=2,967 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar18)
+%   interest(b, uniqueVar18)
+
+% Saving model in: train/models/bRDNs/team.model.ckpt
+% Saving model in: train/models/bRDNs/team.model
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Final call for computing score for team.  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+stepLength_tree1(1.0).
+stepLength_tree2(1.0).
+stepLength_tree3(1.0).
+stepLength_tree4(1.0).
+stepLength_tree5(1.0).
+stepLength_tree6(1.0).
+stepLength_tree7(1.0).
+stepLength_tree8(1.0).
+stepLength_tree9(1.0).
+stepLength_tree10(1.0).
+stepLength_tree11(1.0).
+stepLength_tree12(1.0).
+stepLength_tree13(1.0).
+stepLength_tree14(1.0).
+stepLength_tree15(1.0).
+stepLength_tree16(1.0).
+stepLength_tree17(1.0).
+stepLength_tree18(1.0).
+stepLength_tree19(1.0).
+stepLength_tree20(1.0).
+
+logPrior(-1.8).
+team(A, B, Total) :- // A general accessor. 
+   team(A, B, 1000000, Total), !.
+team(A, B, Total) :- waitHere("This should not fail", team(A, B, Total)).
+
+team(A, B, TreesToUse, Total) :- // A tree-limited accessor (e.g., for tuning the number of trees to use).
+   logPrior(LogPrior),
+   getScore_team_tree1(A, B, TreesToUse, Total1),
+   getScore_team_tree2(A, B, TreesToUse, Total2),
+   getScore_team_tree3(A, B, TreesToUse, Total3),
+   getScore_team_tree4(A, B, TreesToUse, Total4),
+   getScore_team_tree5(A, B, TreesToUse, Total5),
+   getScore_team_tree6(A, B, TreesToUse, Total6),
+   getScore_team_tree7(A, B, TreesToUse, Total7),
+   getScore_team_tree8(A, B, TreesToUse, Total8),
+   getScore_team_tree9(A, B, TreesToUse, Total9),
+   getScore_team_tree10(A, B, TreesToUse, Total10),
+   getScore_team_tree11(A, B, TreesToUse, Total11),
+   getScore_team_tree12(A, B, TreesToUse, Total12),
+   getScore_team_tree13(A, B, TreesToUse, Total13),
+   getScore_team_tree14(A, B, TreesToUse, Total14),
+   getScore_team_tree15(A, B, TreesToUse, Total15),
+   getScore_team_tree16(A, B, TreesToUse, Total16),
+   getScore_team_tree17(A, B, TreesToUse, Total17),
+   getScore_team_tree18(A, B, TreesToUse, Total18),
+   getScore_team_tree19(A, B, TreesToUse, Total19),
+   getScore_team_tree20(A, B, TreesToUse, Total20),
+   Total is LogPrior + Total1 + Total2 + Total3 + Total4 + Total5 + Total6 + Total7 + Total8 + Total9 + Total10 + Total11 + Total12 + Total13 + Total14 + Total15 + Total16 + Total17 + Total18 + Total19 + Total20,
+   !.
+team(A, B, TreesToUse, Total) :- waitHere("This should not fail", team(A, B, TreesToUse, Total)).
+
+getScore_team_tree1(A, B, TreesToUse, 0.0) :- 1 > TreesToUse, !.
+getScore_team_tree1(A, B, TreesToUse, Total1) :- team_tree1(A, B, Total), stepLength_tree1(StepLen), Total1 is Total * StepLen.
+
+getScore_team_tree2(A, B, TreesToUse, 0.0) :- 2 > TreesToUse, !.
+getScore_team_tree2(A, B, TreesToUse, Total2) :- team_tree2(A, B, Total), stepLength_tree2(StepLen), Total2 is Total * StepLen.
+
+getScore_team_tree3(A, B, TreesToUse, 0.0) :- 3 > TreesToUse, !.
+getScore_team_tree3(A, B, TreesToUse, Total3) :- team_tree3(A, B, Total), stepLength_tree3(StepLen), Total3 is Total * StepLen.
+
+getScore_team_tree4(A, B, TreesToUse, 0.0) :- 4 > TreesToUse, !.
+getScore_team_tree4(A, B, TreesToUse, Total4) :- team_tree4(A, B, Total), stepLength_tree4(StepLen), Total4 is Total * StepLen.
+
+getScore_team_tree5(A, B, TreesToUse, 0.0) :- 5 > TreesToUse, !.
+getScore_team_tree5(A, B, TreesToUse, Total5) :- team_tree5(A, B, Total), stepLength_tree5(StepLen), Total5 is Total * StepLen.
+
+getScore_team_tree6(A, B, TreesToUse, 0.0) :- 6 > TreesToUse, !.
+getScore_team_tree6(A, B, TreesToUse, Total6) :- team_tree6(A, B, Total), stepLength_tree6(StepLen), Total6 is Total * StepLen.
+
+getScore_team_tree7(A, B, TreesToUse, 0.0) :- 7 > TreesToUse, !.
+getScore_team_tree7(A, B, TreesToUse, Total7) :- team_tree7(A, B, Total), stepLength_tree7(StepLen), Total7 is Total * StepLen.
+
+getScore_team_tree8(A, B, TreesToUse, 0.0) :- 8 > TreesToUse, !.
+getScore_team_tree8(A, B, TreesToUse, Total8) :- team_tree8(A, B, Total), stepLength_tree8(StepLen), Total8 is Total * StepLen.
+
+getScore_team_tree9(A, B, TreesToUse, 0.0) :- 9 > TreesToUse, !.
+getScore_team_tree9(A, B, TreesToUse, Total9) :- team_tree9(A, B, Total), stepLength_tree9(StepLen), Total9 is Total * StepLen.
+
+getScore_team_tree10(A, B, TreesToUse, 0.0) :- 10 > TreesToUse, !.
+getScore_team_tree10(A, B, TreesToUse, Total10) :- team_tree10(A, B, Total), stepLength_tree10(StepLen), Total10 is Total * StepLen.
+
+getScore_team_tree11(A, B, TreesToUse, 0.0) :- 11 > TreesToUse, !.
+getScore_team_tree11(A, B, TreesToUse, Total11) :- team_tree11(A, B, Total), stepLength_tree11(StepLen), Total11 is Total * StepLen.
+
+getScore_team_tree12(A, B, TreesToUse, 0.0) :- 12 > TreesToUse, !.
+getScore_team_tree12(A, B, TreesToUse, Total12) :- team_tree12(A, B, Total), stepLength_tree12(StepLen), Total12 is Total * StepLen.
+
+getScore_team_tree13(A, B, TreesToUse, 0.0) :- 13 > TreesToUse, !.
+getScore_team_tree13(A, B, TreesToUse, Total13) :- team_tree13(A, B, Total), stepLength_tree13(StepLen), Total13 is Total * StepLen.
+
+getScore_team_tree14(A, B, TreesToUse, 0.0) :- 14 > TreesToUse, !.
+getScore_team_tree14(A, B, TreesToUse, Total14) :- team_tree14(A, B, Total), stepLength_tree14(StepLen), Total14 is Total * StepLen.
+
+getScore_team_tree15(A, B, TreesToUse, 0.0) :- 15 > TreesToUse, !.
+getScore_team_tree15(A, B, TreesToUse, Total15) :- team_tree15(A, B, Total), stepLength_tree15(StepLen), Total15 is Total * StepLen.
+
+getScore_team_tree16(A, B, TreesToUse, 0.0) :- 16 > TreesToUse, !.
+getScore_team_tree16(A, B, TreesToUse, Total16) :- team_tree16(A, B, Total), stepLength_tree16(StepLen), Total16 is Total * StepLen.
+
+getScore_team_tree17(A, B, TreesToUse, 0.0) :- 17 > TreesToUse, !.
+getScore_team_tree17(A, B, TreesToUse, Total17) :- team_tree17(A, B, Total), stepLength_tree17(StepLen), Total17 is Total * StepLen.
+
+getScore_team_tree18(A, B, TreesToUse, 0.0) :- 18 > TreesToUse, !.
+getScore_team_tree18(A, B, TreesToUse, Total18) :- team_tree18(A, B, Total), stepLength_tree18(StepLen), Total18 is Total * StepLen.
+
+getScore_team_tree19(A, B, TreesToUse, 0.0) :- 19 > TreesToUse, !.
+getScore_team_tree19(A, B, TreesToUse, Total19) :- team_tree19(A, B, Total), stepLength_tree19(StepLen), Total19 is Total * StepLen.
+
+getScore_team_tree20(A, B, TreesToUse, 0.0) :- 20 > TreesToUse, !.
+getScore_team_tree20(A, B, TreesToUse, Total20) :- team_tree20(A, B, Total), stepLength_tree20(StepLen), Total20 is Total * StepLen.
+
+flattenedLiteralsInThisSetOfTrees(team, 36, [
+   interest(b, uniqueVar6),
+   skill(a, uniqueVar17),
+   interest(b, uniqueVar17),
+   interest(b, uniqueVar2),
+   interest(b, uniqueVar1),
+   skill(a, uniqueVar15),
+   skill(a, uniqueVar1),
+   interest(b, uniqueVar15),
+   interest(b, uniqueVar18),
+   skill(a, uniqueVar5),
+   interest(b, uniqueVar9),
+   interest(b, uniqueVar12),
+   skill(a, uniqueVar16),
+   interest(b, uniqueVar14),
+   skill(a, uniqueVar8),
+   skill(a, uniqueVar10),
+   skill(a, uniqueVar11),
+   interest(b, uniqueVar8),
+   interest(b, uniqueVar10),
+   interest(b, uniqueVar11),
+   skill(a, uniqueVar4),
+   interest(b, uniqueVar3),
+   skill(a, uniqueVar7),
+   interest(b, uniqueVar7),
+   interest(b, uniqueVar4),
+   interest(b, uniqueVar13),
+   skill(a, uniqueVar3),
+   skill(a, uniqueVar18),
+   interest(b, uniqueVar16),
+   skill(a, uniqueVar13),
+   skill(a, uniqueVar9),
+   interest(b, uniqueVar5),
+   skill(a, uniqueVar12),
+   skill(a, uniqueVar14),
+   skill(a, uniqueVar2),
+   skill(a, uniqueVar6)]).
+%      addToQueueOfTreeStructuredLearningTasks (level=0; score=1.797693135e+308)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 0 and with score = 1.797693135e+308) into the LAST position (#1) in the search queue.
+Variance:57.438025494422114
+Set score:0.0025
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% Have these 10 positive seeds: 2568 36836 39809 97136 98140 98202 108158 135315 146641 172702
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 343,380.0/343,380.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 343,380.0/343,380.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #1, bodyLen=0] 'team(_, _).  [covers 343,380.0/343,380.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 343,380.0/343,380.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 0.0/343,380.0 pos, 0.0/0.0 neg]Coverage only partially computed- took too long to compute.
+
+% Consider expanding [#2 of outerLoop #1, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 343,380.0/343,380.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 3 items to OPEN for evaluation and possible insertion.
+% Have created 3 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 343,380.0/343,380.0 pos, 0.0/0.0 neg]
+%     Score = -18,849,806.147261 (regressionFit = 18,849,806.147259, penalties=2.0300000000000005E-6) for clause:  team(A, B) :- skill(A, C), interest(B, C).  [covers 55,120.0/343,380.0 pos, 0.0/0.0 neg]
+% Gleaner: New best node found (score = -18,849,806.147261): team(A, B) :- skill(A, C), interest(B, C).  [covers 55,120.0/343,380.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 0.0/343,380.0 pos, 0.0/0.0 neg]Coverage only partially computed- took too long to compute.
+
+% Consider expanding [#3 of outerLoop #1, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 0.0/343,380.0 pos, 0.0/0.0 neg]Coverage only partially computed- took too long to compute.' score=-Infinity
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 55,120.0/343,380.0 pos, 0.0/0.0 neg]
+
+% The best node found: team(A, B) :- skill(A, C), interest(B, C).  [covers 55,120.0/343,380.0 pos, 0.0/0.0 neg]
+
+% Expanding node at Level 0 with score = 1.797693e+308.
+% Will extend: team(A, B) :- skill(A, C), interest(B, C).  [covers 55,120.0/343,380.0 pos, 0.0/0.0 neg]
+Comparing variance: 4.4732883096779376E-11 to score=0.0025 #egs=55120.0
+Comparing variance: 65.39168163205576 to score=0.0025 #egs=288260.0
+%   Creating a TRUE-branch leaf because good enough fit since score < 0.0025
+%   Creating a FALSE-branch interior node with wgtedCountFalseBranchPos = 288,260.0
+%      addToQueueOfTreeStructuredLearningTasks (level=1; score=-65.391682)
+%         ILP node to extend: null
+%      Insert tree-structured search node (@ level = 1 and with score = -65.391682) into the LAST position (#1) in the search queue.
+
+% Time for loop #1: 2.802 seconds.
+% Internal node max length = 2
+% Max tree depth in lits   = 12
+% Max tree depth in nodes  = 100
+% Max number of clauses    = 10
+
+% On cycle #1, the best clause found is:
+%      team(A, B) :- skill(A, C), interest(B, C).  [covers 55,120.0/343,380.0 pos, 0.0/0.0 neg]
+% This clause covers 55120 positive examples, of which 55120 are newly covered.
+% It also covers 0 negative examples, of which 0 are newly covered.
+
+% Have these 6 positive seeds: 482 67792 90295 100407 169862 200041
+% [AdviceProcessor]  Generated 0 clauses at relevance level STRONGLY_IRRELEVANT.
+
+% target           = team(A, B)
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.2E-7) for clause:  team(_, _).  [covers 288,260.0/288,260.0 pos, 0.0/0.0 neg]
+% Most-general root: team(_, _).  [covers 288,260.0/288,260.0 pos, 0.0/0.0 neg]  score = -Infinity
+
+% Consider expanding [#1 of outerLoop #2, bodyLen=0] 'team(_, _).  [covers 288,260.0/288,260.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 1, |OPEN| = 0.  Pruned 0 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants.
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(A, _) :- skill(A, _).  [covers 288,260.0/288,260.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=1.23E-6) for clause:  team(_, A) :- interest(A, _).  [covers 0.0/288,260.0 pos, 0.0/0.0 neg]Coverage only partially computed- took too long to compute.
+
+% Consider expanding [#2 of outerLoop #2, bodyLen=1] 'team(A, _) :- skill(A, _).  [covers 288,260.0/288,260.0 pos, 0.0/0.0 neg]' score=-Infinity
+%  At # nodes expanded = 2, |OPEN| = 1.  Pruned 1 variant children.  Sending 2 items to OPEN for evaluation and possible insertion.
+% Have created 2 valid-on-seeds descendants and have picked up 1 bad extensions.
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, _) :- skill(A, _), skill(A, _).  [covers 288,260.0/288,260.0 pos, 0.0/0.0 neg]
+%     Score = -Infinity (regressionFit = Infinity, penalties=2.24E-6) for clause:  team(A, B) :- skill(A, _), interest(B, _).  [covers 0.0/288,260.0 pos, 0.0/0.0 neg]Coverage only partially computed- took too long to compute.
+
+% Consider expanding [#3 of outerLoop #2, bodyLen=1] 'team(_, A) :- interest(A, _).  [covers 0.0/288,260.0 pos, 0.0/0.0 neg]Coverage only partially computed- took too long to compute.' score=-Infinity
+
+% The best node found: null
+
+% No acceptable clause was learned on this cycle of the ILP inner loop (LearnOneClause).
+% The closest-to-acceptable node found (score = -Infinity):
+%  null
+Created a leaf under (team(A, B) :- skill(A, Anon6613), interest(B, Anon6613))
+
+% ******************************************
+
+%  Have stopped ILP's outer loop because the tree-structured queue is empty.
+
+% ******************************************
+
+%%%%%  WILL-Produced Tree Combined @ 18:20:46 3/25/26.  [Using 23,279,112 memory cells.]  %%%%%
+
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 4.807778070571242;  // std dev = 0.002, 55,120.000 (wgt'ed) examples reached here.  /* #pos=55,120 */
+%   else return 0.4635437328744766;  // std dev = 8.087, 288,260.000 (wgt'ed) examples reached here.  /* #neg=228,920 #pos=59,340 */
+
+
+% Clauses:
+
+team(A, B, 4.807778070571242) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, 0.4635437328744766) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 4.807778070571242) :-  /* #pos=55,120 */ 
+   skill(a, uniqueVar19),
+   interest(b, uniqueVar19),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, 0.4635437328744766) :-  /* #neg=228,920 #pos=59,340 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar19)
+%   interest(b, uniqueVar19)
+
+% Time taken to learn model for 'team': 41.197 seconds.
+% Saving model in: train/models/bRDNs/team.model
+cached groundings hit: 0
+Misses: 0
+
+% Total learning time (20 trees): 41.431 seconds.

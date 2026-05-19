@@ -1,0 +1,9 @@
+Method,Avg Teams per Professor,Max Teams by one Prof,Avg Team Size,Total Teams Formed,Unique Professors
+M0_random,434.0,434,10.0,142352,328
+M1_string,434.0,434,10.0,87668,202
+Knapsack_01,434.0,434,10.0,87668,202
+dynamic_knapsack,434.0,434,10.0,87668,202
+dynamic_knapsack_v2,434.0,434,10.0,87668,202
+dynamic_knapsack_Marginal_Utility_8_CAP_05_seatcost,434.0,434,10.0,87668,202
+dynamic_knapsack_Marginal_Utility,434.0,434,10.0,87668,202
+M3_boosted,428.0,428,9.42,86456,202

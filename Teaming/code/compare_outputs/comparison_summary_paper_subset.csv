@@ -1,0 +1,7 @@
+Method,Method_name,dataset,G_mean,G_std,Volume_mean,n_researchers,n_rows
+M0,Random baseline,teaming_uc1_m0.csv,0.08738,0.008946,10.0,46,4600
+M1,String / lexical matching,teaming_uc1_m1.csv,0.378218,0.094698,10.0,46,4600
+M2,Semantic mapper matching,teaming_uc1_m2.csv,0.415593,0.094981,10.0,46,4600
+M3,BoostSRL / relational learning,teaming_uc1_m3.csv,0.601349,0.036786,7.455,46,4600
+M6,Exact knapsack coverage,teaming_uc1_m6.csv,0.46455,0.040063,5.785652,46,4600
+M7,Marginal-utility knapsack,teaming_uc1_m7.csv,0.621506,0.009405,6.338696,46,4600

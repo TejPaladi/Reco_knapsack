@@ -1,0 +1,17 @@
+{
+  "method": "M3",
+  "description": "v0 IITR M3 run on the fairness-paper slice using the first 100 archive proposals and the 46 researchers in v0_data/researchers.csv. A slice-specific BoostSRL workspace is regenerated before inference. The workspace preserves a held-out BoostSRL evaluation artifact, then reruns inference on the full 100x46 slice so the final proposal-member scores used by M3 cover every proposal-anchor pair. Those scores are then used to build teams with lexical fallback where the learned positive pool is empty.",
+  "researchers_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/data/v0_data/researchers.csv",
+  "proposals_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/data/v0_data/archive_proposals.csv",
+  "results_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/code/boosted_results/v0_slice_100x46/test/results_team.db",
+  "proposal_count": 100,
+  "anchor_researcher_count": 46,
+  "unique_proposal_ids": 100,
+  "expected_query_count": 4600,
+  "bandit_scored_pairs": 4600,
+  "bandit_matched_proposals": 100,
+  "bandit_unmatched_proposals": 0,
+  "uses_representative_variant_selection": false,
+  "uses_pool_based_width_cap": true,
+  "m3_target_width_rule": "round(2.5 * sqrt(positive_count)), capped to [1, num_teams], with zero-positive fallback to 8"
+}

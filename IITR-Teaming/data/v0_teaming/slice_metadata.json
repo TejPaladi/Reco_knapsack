@@ -1,0 +1,18 @@
+{
+  "dataset": "IITR-Teaming v0 fairness-paper slice",
+  "researchers_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/data/v0_data/researchers.csv",
+  "proposals_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/data/v0_data/archive_proposals.csv",
+  "results_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/code/boosted_results/v0_slice_100x46/test/results_team.db",
+  "boosted_workspace": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/code/boosted_results/v0_slice_100x46",
+  "proposal_rows_used": 100,
+  "unique_title_count": 98,
+  "unique_proposal_id_count": 100,
+  "anchor_researcher_count": 46,
+  "proposal_link_examples": [
+    "v0_001_2nd_call_for_proposal_for_dst_sti_policy_fellowship_programme",
+    "v0_002_dst_daad_germany_joint_call_for_proposal_2017",
+    "v0_003_call_for_applications_under_the_second_phase_of_the_national_geospatial_chair_professor_scheme",
+    "v0_004_advertisement_for_submission_of_research_proposal_under_cognitive_science_research_initiative",
+    "v0_005_invites_science_and_technology_project_proposals___ministry_of_mines"
+  ]
+}

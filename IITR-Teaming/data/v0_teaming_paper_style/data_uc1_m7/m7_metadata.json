@@ -1,0 +1,20 @@
+{
+  "method": "M7",
+  "description": "Marginal-utility extension of M6 for IITR Teaming on top of the M1 lexical matching pipeline. The top string-matched researchers are shortlisted first using proposal-specific pseudo skills, the anchor researcher is fixed, additional teammates are scored by weighted diminishing-return utility minus a per-seat cost, and the exported variants are selected automatically as a diverse representative set whose width is derived from row-level branching structure and proposal complexity.",
+  "skeleton_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/data/v0_teaming_paper_style/teaming_uc1_m3.csv",
+  "proposal_skills_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/data/v0_teaming_paper_style/data_uc1_m1/m1_proposal_skills.csv",
+  "researcher_skills_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/data/v0_teaming_paper_style/data_uc1_m1/m1_researcher_skills.csv",
+  "pseudo_skills_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/data/v0_teaming_paper_style/data_uc1_m1/m1_pseudo_researcher_skills.csv",
+  "team_size": 5,
+  "num_teams_requested": 10,
+  "alpha": 0.5,
+  "cost_multiplier": 0.14,
+  "max_candidates": 18,
+  "lexical_shortlist": 30,
+  "rows_written": 4600,
+  "proposal_count": 100,
+  "anchor_researcher_count": 46,
+  "round_digits": 4,
+  "auto_selects_diverse_representatives": true,
+  "representative_budget_rule": "round(sqrt(unique_optional_members * max(1, required_skill_count)) / 1.3)"
+}

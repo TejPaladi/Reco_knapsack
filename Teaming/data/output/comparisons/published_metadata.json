@@ -1,0 +1,16 @@
+{
+  "project": "usc_teaming",
+  "published_root": "data/output",
+  "published_method_files": {
+    "M0": "data/output/teaming_uc1_m0.csv",
+    "M1": "data/output/teaming_uc1_m1.csv",
+    "M2": "data/output/teaming_uc1_m2.csv",
+    "M3": "data/output/teaming_uc1_m3.csv",
+    "M6": "data/output/teaming_uc1_m6.csv",
+    "M7": "data/output/teaming_uc1_m7.csv"
+  },
+  "quality_source_root": "data/v1_output_teaming/teaming_1698proposals_316researchers",
+  "quality_summary_source": "code/compare_outputs/comparison_summary.csv",
+  "fairness_source_root": "evaluation/output_paper_subset",
+  "note": "Published quality uses the full USC 202-researcher run. Published fairness uses the paper-aligned USC subset output retained under evaluation/output_paper_subset."
+}

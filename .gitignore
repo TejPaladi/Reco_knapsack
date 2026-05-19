@@ -1,0 +1,21 @@
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+*.executed.ipynb
+
+# Local/intermediate generated data
+Meal/data/_intermediate_legacy_source/
+
+# GitHub rejects regular Git blobs over 100 MB. These generated Teaming CSVs
+# are kept locally when copied from the parent workspace, but are not committed
+# without Git LFS or another artifact store.
+Teaming/data/v0_output_teaming/v1-2023-04-30/teaming_uc3_m0.csv
+Teaming/data/v0_output_teaming/v1-2023-04-30/teaming_uc3_m1.csv
+Teaming/data/v0_output_teaming/v1-2023-04-30/teaming_uc3_m2.csv
+Teaming/data/v1_output_teaming/teaming_1698proposals_316researchers/data_uc1_hybrid/hybrid_teaming.csv
+Teaming/data/v1_output_teaming/teaming_1698proposals_316researchers/data_uc1_hybrid/teaming_uc1_hybrid.csv
+Teaming/data/v1_output_teaming/teaming_1698proposals_316researchers/data_uc1_m0/m0_teaming.csv
+Teaming/data/v1_output_teaming/teaming_1698proposals_316researchers/data_uc1_m1/m1_teaming.csv
+Teaming/data/v1_output_teaming/teaming_1698proposals_316researchers/teaming_uc1_m6_legacy_greedy_coverage.csv

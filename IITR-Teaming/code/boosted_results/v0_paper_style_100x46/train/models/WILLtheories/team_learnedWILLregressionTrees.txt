@@ -1,0 +1,868 @@
+usePrologVariables: true.
+
+% maxTreeDepthInNodes                 = 100
+% maxTreeDepthInLiterals              = 12
+% maxNumberOfLiteralsAtAnInteriorNode = 2
+% maxFreeBridgersInBody               = 1
+% maxNumberOfClauses                  = 10
+% maxNodesToConsider                  = 10
+% maxNodesToCreate                    = 10,000
+% maxAcceptableNodeScoreToStop        = 0.003
+% negPosRatio                         = 2.000
+% testNegPosRatio                     = -1.000
+% # of pos examples                   = 3,394
+% # of neg examples                   = 0
+
+
+
+%%%%%  WILL-Produced Tree #1 @ 14:31:57 4/4/26.  [Using 6,714,248 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.8581489350995073;  // std dev = 2.02e-06, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.14126213674972576;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.8581489350995073) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.14126213674972576) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.8581489350995073) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar1),
+   interest(b, uniqueVar1),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.14126213674972576) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar1)
+%   interest(b, uniqueVar1)
+
+%%%%%  WILL-Produced Tree #2 @ 14:31:58 4/4/26.  [Using 7,404,536 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.7194734122109407;  // std dev = 5.75e-06, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.1249203349262051;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.7194734122109407) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.1249203349262051) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.7194734122109407) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar2),
+   interest(b, uniqueVar2),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.1249203349262051) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar2)
+%   skill(a, uniqueVar2)
+
+%%%%%  WILL-Produced Tree #3 @ 14:31:58 4/4/26.  [Using 7,956,160 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.5553664367463094;  // std dev = 0.000, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.1118384887283776;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.5553664367463094) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.1118384887283776) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.5553664367463094) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar3),
+   interest(b, uniqueVar3),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.1118384887283776) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar3)
+%   interest(b, uniqueVar3)
+
+%%%%%  WILL-Produced Tree #4 @ 14:31:58 4/4/26.  [Using 7,983,360 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.4175135841583136;  // std dev = 0.000, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.10115272224458635;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.4175135841583136) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.10115272224458635) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.4175135841583136) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar4),
+   interest(b, uniqueVar4),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.10115272224458635) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar4)
+%   interest(b, uniqueVar4)
+
+%%%%%  WILL-Produced Tree #5 @ 14:31:59 4/4/26.  [Using 8,002,312 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.3207118471601563;  // std dev = 0.000, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.0922736097715886;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.3207118471601563) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.0922736097715886) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.3207118471601563) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar5),
+   interest(b, uniqueVar5),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.0922736097715886) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar5)
+%   interest(b, uniqueVar5)
+
+%%%%%  WILL-Produced Tree #6 @ 14:31:59 4/4/26.  [Using 8,039,736 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.25517224256947624;  // std dev = 3.16e-06, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.08478712874228361;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.25517224256947624) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.08478712874228361) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.25517224256947624) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar6),
+   interest(b, uniqueVar6),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.08478712874228361) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar6)
+%   skill(a, uniqueVar6)
+
+%%%%%  WILL-Produced Tree #7 @ 14:31:59 4/4/26.  [Using 8,043,120 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.20975771563253545;  // std dev = 9.23e-07, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.07839490359290478;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.20975771563253545) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.07839490359290478) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.20975771563253545) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar7),
+   interest(b, uniqueVar7),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.07839490359290478) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar7)
+%   skill(a, uniqueVar7)
+
+%%%%%  WILL-Produced Tree #8 @ 14:32:00 4/4/26.  [Using 8,097,912 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.1770964977452764;  // std dev = 0.000, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.07287698359031303;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.1770964977452764) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.07287698359031303) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.1770964977452764) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar8),
+   interest(b, uniqueVar8),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.07287698359031303) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar8)
+%   skill(a, uniqueVar8)
+
+%%%%%  WILL-Produced Tree #9 @ 14:32:00 4/4/26.  [Using 8,102,392 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.1527438580936648;  // std dev = 1.69e-06, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.06806795858164384;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.1527438580936648) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.06806795858164384) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.1527438580936648) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar9),
+   interest(b, uniqueVar9),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.06806795858164384) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar9)
+%   interest(b, uniqueVar9)
+
+%%%%%  WILL-Produced Tree #10 @ 14:32:01 4/4/26.  [Using 8,106,648 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.13400703000800873;  // std dev = 1.47e-06, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.06384121284943488;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.13400703000800873) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.06384121284943488) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.13400703000800873) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar10),
+   interest(b, uniqueVar10),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.06384121284943488) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar10)
+%   skill(a, uniqueVar10)
+
+%%%%%  WILL-Produced Tree Combined @ 14:32:01 4/4/26.  [Using 8,109,968 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.11920380823127855;  // std dev = 1.19e-06, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.060098286762563916;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.11920380823127855) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.060098286762563916) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.11920380823127855) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar11),
+   interest(b, uniqueVar11),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.060098286762563916) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar11)
+%   interest(b, uniqueVar11)
+
+%%%%%  WILL-Produced Tree #12 @ 14:32:02 4/4/26.  [Using 8,190,664 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.10724508452247271;  // std dev = 0.000, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.0567615285438945;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.10724508452247271) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.0567615285438945) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.10724508452247271) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar12),
+   interest(b, uniqueVar12),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.0567615285438945) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar12)
+%   skill(a, uniqueVar12)
+
+%%%%%  WILL-Produced Tree #13 @ 14:32:02 4/4/26.  [Using 8,194,016 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.09740112745501298;  // std dev = 0.000, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.05376891609659877;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.09740112745501298) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.05376891609659877) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.09740112745501298) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar13),
+   interest(b, uniqueVar13),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.05376891609659877) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar13)
+%   interest(b, uniqueVar13)
+
+%%%%%  WILL-Produced Tree #14 @ 14:32:03 4/4/26.  [Using 8,197,304 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.08916756606307039;  // std dev = 0.000, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.05107034134061551;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.08916756606307039) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.05107034134061551) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.08916756606307039) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar14),
+   interest(b, uniqueVar14),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.05107034134061551) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar14)
+%   interest(b, uniqueVar14)
+
+%%%%%  WILL-Produced Tree #15 @ 14:32:03 4/4/26.  [Using 8,200,592 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.08218604818271633;  // std dev = 0.000, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.04862489977425036;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.08218604818271633) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.04862489977425036) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.08218604818271633) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar15),
+   interest(b, uniqueVar15),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.04862489977425036) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar15)
+%   interest(b, uniqueVar15)
+
+%%%%%  WILL-Produced Tree #16 @ 14:32:04 4/4/26.  [Using 8,203,888 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.07619570198076614;  // std dev = 6.98e-07, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.04639888346558033;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.07619570198076614) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.04639888346558033) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.07619570198076614) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar16),
+   interest(b, uniqueVar16),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.04639888346558033) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar16)
+%   interest(b, uniqueVar16)
+
+%%%%%  WILL-Produced Tree #17 @ 14:32:04 4/4/26.  [Using 8,206,944 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.07100250423444285;  // std dev = 5.62e-07, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.04436427443204722;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.07100250423444285) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.04436427443204722) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.07100250423444285) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar17),
+   interest(b, uniqueVar17),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.04436427443204722) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar17)
+%   skill(a, uniqueVar17)
+
+%%%%%  WILL-Produced Tree #18 @ 14:32:05 4/4/26.  [Using 8,326,824 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.06645938878746448;  // std dev = 4.60e-07, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.04249759937293744;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.06645938878746448) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.04249759937293744) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.06645938878746448) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar18),
+   interest(b, uniqueVar18),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.04249759937293744) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar18)
+%   skill(a, uniqueVar18)
+
+%%%%%  WILL-Produced Tree #19 @ 14:32:05 4/4/26.  [Using 8,329,984 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.06245298988160214;  // std dev = 0.000, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.04077904898812434;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.06245298988160214) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.04077904898812434) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.06245298988160214) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar19),
+   interest(b, uniqueVar19),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.04077904898812434) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar19)
+%   interest(b, uniqueVar19)
+
+%%%%%  WILL-Produced Tree #20 @ 14:32:06 4/4/26.  [Using 8,333,072 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 0.05889459763950782;  // std dev = 0.000, 1,696.000 (wgt'ed) examples reached here.  /* #pos=1,696 */
+%   else return -0.03919179351781762;  // std dev = 1.000, 1,698.000 (wgt'ed) examples reached here.  /* #neg=1,697 #pos=1 */
+
+
+% Clauses:
+
+team(A, B, 0.05889459763950782) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -0.03919179351781762) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 0.05889459763950782) :-  /* #pos=1,696 */ 
+   skill(a, uniqueVar20),
+   interest(b, uniqueVar20),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -0.03919179351781762) :-  /* #neg=1,697 #pos=1 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   skill(a, uniqueVar20)
+%   interest(b, uniqueVar20)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Final call for computing score for team.  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+stepLength_tree1(1.0).
+stepLength_tree2(1.0).
+stepLength_tree3(1.0).
+stepLength_tree4(1.0).
+stepLength_tree5(1.0).
+stepLength_tree6(1.0).
+stepLength_tree7(1.0).
+stepLength_tree8(1.0).
+stepLength_tree9(1.0).
+stepLength_tree10(1.0).
+stepLength_tree11(1.0).
+stepLength_tree12(1.0).
+stepLength_tree13(1.0).
+stepLength_tree14(1.0).
+stepLength_tree15(1.0).
+stepLength_tree16(1.0).
+stepLength_tree17(1.0).
+stepLength_tree18(1.0).
+stepLength_tree19(1.0).
+stepLength_tree20(1.0).
+
+logPrior(-1.8).
+team(A, B, Total) :- // A general accessor. 
+   team(A, B, 1000000, Total), !.
+team(A, B, Total) :- waitHere("This should not fail", team(A, B, Total)).
+
+team(A, B, TreesToUse, Total) :- // A tree-limited accessor (e.g., for tuning the number of trees to use).
+   logPrior(LogPrior),
+   getScore_team_tree1(A, B, TreesToUse, Total1),
+   getScore_team_tree2(A, B, TreesToUse, Total2),
+   getScore_team_tree3(A, B, TreesToUse, Total3),
+   getScore_team_tree4(A, B, TreesToUse, Total4),
+   getScore_team_tree5(A, B, TreesToUse, Total5),
+   getScore_team_tree6(A, B, TreesToUse, Total6),
+   getScore_team_tree7(A, B, TreesToUse, Total7),
+   getScore_team_tree8(A, B, TreesToUse, Total8),
+   getScore_team_tree9(A, B, TreesToUse, Total9),
+   getScore_team_tree10(A, B, TreesToUse, Total10),
+   getScore_team_tree11(A, B, TreesToUse, Total11),
+   getScore_team_tree12(A, B, TreesToUse, Total12),
+   getScore_team_tree13(A, B, TreesToUse, Total13),
+   getScore_team_tree14(A, B, TreesToUse, Total14),
+   getScore_team_tree15(A, B, TreesToUse, Total15),
+   getScore_team_tree16(A, B, TreesToUse, Total16),
+   getScore_team_tree17(A, B, TreesToUse, Total17),
+   getScore_team_tree18(A, B, TreesToUse, Total18),
+   getScore_team_tree19(A, B, TreesToUse, Total19),
+   getScore_team_tree20(A, B, TreesToUse, Total20),
+   Total is LogPrior + Total1 + Total2 + Total3 + Total4 + Total5 + Total6 + Total7 + Total8 + Total9 + Total10 + Total11 + Total12 + Total13 + Total14 + Total15 + Total16 + Total17 + Total18 + Total19 + Total20,
+   !.
+team(A, B, TreesToUse, Total) :- waitHere("This should not fail", team(A, B, TreesToUse, Total)).
+
+getScore_team_tree1(A, B, TreesToUse, 0.0) :- 1 > TreesToUse, !.
+getScore_team_tree1(A, B, TreesToUse, Total1) :- team_tree1(A, B, Total), stepLength_tree1(StepLen), Total1 is Total * StepLen.
+
+getScore_team_tree2(A, B, TreesToUse, 0.0) :- 2 > TreesToUse, !.
+getScore_team_tree2(A, B, TreesToUse, Total2) :- team_tree2(A, B, Total), stepLength_tree2(StepLen), Total2 is Total * StepLen.
+
+getScore_team_tree3(A, B, TreesToUse, 0.0) :- 3 > TreesToUse, !.
+getScore_team_tree3(A, B, TreesToUse, Total3) :- team_tree3(A, B, Total), stepLength_tree3(StepLen), Total3 is Total * StepLen.
+
+getScore_team_tree4(A, B, TreesToUse, 0.0) :- 4 > TreesToUse, !.
+getScore_team_tree4(A, B, TreesToUse, Total4) :- team_tree4(A, B, Total), stepLength_tree4(StepLen), Total4 is Total * StepLen.
+
+getScore_team_tree5(A, B, TreesToUse, 0.0) :- 5 > TreesToUse, !.
+getScore_team_tree5(A, B, TreesToUse, Total5) :- team_tree5(A, B, Total), stepLength_tree5(StepLen), Total5 is Total * StepLen.
+
+getScore_team_tree6(A, B, TreesToUse, 0.0) :- 6 > TreesToUse, !.
+getScore_team_tree6(A, B, TreesToUse, Total6) :- team_tree6(A, B, Total), stepLength_tree6(StepLen), Total6 is Total * StepLen.
+
+getScore_team_tree7(A, B, TreesToUse, 0.0) :- 7 > TreesToUse, !.
+getScore_team_tree7(A, B, TreesToUse, Total7) :- team_tree7(A, B, Total), stepLength_tree7(StepLen), Total7 is Total * StepLen.
+
+getScore_team_tree8(A, B, TreesToUse, 0.0) :- 8 > TreesToUse, !.
+getScore_team_tree8(A, B, TreesToUse, Total8) :- team_tree8(A, B, Total), stepLength_tree8(StepLen), Total8 is Total * StepLen.
+
+getScore_team_tree9(A, B, TreesToUse, 0.0) :- 9 > TreesToUse, !.
+getScore_team_tree9(A, B, TreesToUse, Total9) :- team_tree9(A, B, Total), stepLength_tree9(StepLen), Total9 is Total * StepLen.
+
+getScore_team_tree10(A, B, TreesToUse, 0.0) :- 10 > TreesToUse, !.
+getScore_team_tree10(A, B, TreesToUse, Total10) :- team_tree10(A, B, Total), stepLength_tree10(StepLen), Total10 is Total * StepLen.
+
+getScore_team_tree11(A, B, TreesToUse, 0.0) :- 11 > TreesToUse, !.
+getScore_team_tree11(A, B, TreesToUse, Total11) :- team_tree11(A, B, Total), stepLength_tree11(StepLen), Total11 is Total * StepLen.
+
+getScore_team_tree12(A, B, TreesToUse, 0.0) :- 12 > TreesToUse, !.
+getScore_team_tree12(A, B, TreesToUse, Total12) :- team_tree12(A, B, Total), stepLength_tree12(StepLen), Total12 is Total * StepLen.
+
+getScore_team_tree13(A, B, TreesToUse, 0.0) :- 13 > TreesToUse, !.
+getScore_team_tree13(A, B, TreesToUse, Total13) :- team_tree13(A, B, Total), stepLength_tree13(StepLen), Total13 is Total * StepLen.
+
+getScore_team_tree14(A, B, TreesToUse, 0.0) :- 14 > TreesToUse, !.
+getScore_team_tree14(A, B, TreesToUse, Total14) :- team_tree14(A, B, Total), stepLength_tree14(StepLen), Total14 is Total * StepLen.
+
+getScore_team_tree15(A, B, TreesToUse, 0.0) :- 15 > TreesToUse, !.
+getScore_team_tree15(A, B, TreesToUse, Total15) :- team_tree15(A, B, Total), stepLength_tree15(StepLen), Total15 is Total * StepLen.
+
+getScore_team_tree16(A, B, TreesToUse, 0.0) :- 16 > TreesToUse, !.
+getScore_team_tree16(A, B, TreesToUse, Total16) :- team_tree16(A, B, Total), stepLength_tree16(StepLen), Total16 is Total * StepLen.
+
+getScore_team_tree17(A, B, TreesToUse, 0.0) :- 17 > TreesToUse, !.
+getScore_team_tree17(A, B, TreesToUse, Total17) :- team_tree17(A, B, Total), stepLength_tree17(StepLen), Total17 is Total * StepLen.
+
+getScore_team_tree18(A, B, TreesToUse, 0.0) :- 18 > TreesToUse, !.
+getScore_team_tree18(A, B, TreesToUse, Total18) :- team_tree18(A, B, Total), stepLength_tree18(StepLen), Total18 is Total * StepLen.
+
+getScore_team_tree19(A, B, TreesToUse, 0.0) :- 19 > TreesToUse, !.
+getScore_team_tree19(A, B, TreesToUse, Total19) :- team_tree19(A, B, Total), stepLength_tree19(StepLen), Total19 is Total * StepLen.
+
+getScore_team_tree20(A, B, TreesToUse, 0.0) :- 20 > TreesToUse, !.
+getScore_team_tree20(A, B, TreesToUse, Total20) :- team_tree20(A, B, Total), stepLength_tree20(StepLen), Total20 is Total * StepLen.
+
+flattenedLiteralsInThisSetOfTrees(team, 40, [
+   interest(b, uniqueVar10),
+   skill(a, uniqueVar8),
+   skill(a, uniqueVar3),
+   interest(b, uniqueVar1),
+   interest(b, uniqueVar3),
+   interest(b, uniqueVar19),
+   skill(a, uniqueVar19),
+   skill(a, uniqueVar10),
+   interest(b, uniqueVar4),
+   skill(a, uniqueVar16),
+   interest(b, uniqueVar9),
+   interest(b, uniqueVar20),
+   skill(a, uniqueVar11),
+   skill(a, uniqueVar15),
+   skill(a, uniqueVar1),
+   skill(a, uniqueVar4),
+   skill(a, uniqueVar6),
+   interest(b, uniqueVar12),
+   interest(b, uniqueVar14),
+   skill(a, uniqueVar14),
+   interest(b, uniqueVar7),
+   interest(b, uniqueVar17),
+   skill(a, uniqueVar13),
+   skill(a, uniqueVar17),
+   skill(a, uniqueVar5),
+   interest(b, uniqueVar11),
+   interest(b, uniqueVar15),
+   interest(b, uniqueVar18),
+   skill(a, uniqueVar2),
+   skill(a, uniqueVar9),
+   interest(b, uniqueVar2),
+   interest(b, uniqueVar5),
+   skill(a, uniqueVar12),
+   skill(a, uniqueVar18),
+   interest(b, uniqueVar6),
+   skill(a, uniqueVar20),
+   interest(b, uniqueVar13),
+   interest(b, uniqueVar8),
+   skill(a, uniqueVar7),
+   interest(b, uniqueVar16)]).
+
+%%%%%  WILL-Produced Tree Combined @ 14:32:10 4/4/26.  [Using 7,887,904 memory cells.]  %%%%%
+
+% FOR team(A, B):
+%   if ( skill(A, C), interest(B, C) )
+%   then return 4.630200376402573;  // std dev = 0.000, 33,920.000 (wgt'ed) examples reached here.  /* #pos=33,920 */
+%   else return -1.4229710520721748;  // std dev = 0.485, 33,960.000 (wgt'ed) examples reached here.  /* #neg=33,940 #pos=20 */
+
+
+% Clauses:
+
+team(A, B, 4.630200376402573) :- 
+     skill(A, C), 
+     interest(B, C), 
+     !. // Clause #1.
+
+team(A, B, -1.4229710520721748) :- !. // Clause #2.
+
+
+% The flattened versions of these clauses:
+
+flattened_team(a, b, 4.630200376402573) :-  /* #pos=33,920 */ 
+   skill(a, uniqueVar21),
+   interest(b, uniqueVar21),
+   !. // Flattened version of clause #1.
+
+flattened_team(underscore, underscore, -1.4229710520721748) :-  /* #neg=33,940 #pos=20 */ 
+   !. // Flattened version of clause #2.
+
+
+% The unique flattened literals:
+%   interest(b, uniqueVar21)
+%   skill(a, uniqueVar21)

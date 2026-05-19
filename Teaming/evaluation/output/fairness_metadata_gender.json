@@ -1,0 +1,64 @@
+{
+  "project": "Teaming",
+  "dataset": "/Users/tej/Desktop/Recommendation_Projects/Teaming/data/v1_output_teaming/teaming_1698proposals_316researchers",
+  "aligned_rows": 87264,
+  "decision_rows": 1209229,
+  "protected_attribute": "gender",
+  "protected_groups": [
+    "male",
+    "female"
+  ],
+  "conditioning_attribute": "year",
+  "name_inference_mode": "paper_ensemble",
+  "gender_inference": {
+    "resolved_count": 159,
+    "unresolved_count": 43,
+    "source_counts": {
+      "ensemble_majority": 141,
+      "unknown": 43,
+      "pronoun_fallback": 18
+    },
+    "description": "Gender is inferred from first names using a paper-style ensemble of gender-guesser, Genderize, and SexMachine, with biography-pronoun fallback when the name-only ensemble remains ambiguous."
+  },
+  "table2_interpretation": "Table 2 compares the inferred gender distribution of researchers appearing in each method's top recommended team against the inferred researcher-population baseline.",
+  "table3_interpretation": "Table 3 operates on member-selection decisions. For each aligned (proposal_id, researcher_name) row, the oracle label is the union of members in the highest-goodness top team(s) across methods; each method predicts the members in its own top team. Add-0.5 smoothing is applied to all rate-based metrics.",
+  "table3_metrics": {
+    "SP": "Smoothed demographic-parity gap in member selection.",
+    "CSP": "Weighted smoothed demographic-parity gap conditioned on year.",
+    "EO": "Average of the smoothed TPR gap and smoothed FPR gap.",
+    "PRP": "Smoothed predictive-rate-parity gap using PPV.",
+    "TE": "Smoothed treatment-equality gap using FN/FP ratios."
+  },
+  "methods": {
+    "M0": {
+      "name": "Random baseline",
+      "filename": "teaming_uc1_m0.csv"
+    },
+    "M1": {
+      "name": "String / lexical matching",
+      "filename": "teaming_uc1_m1.csv"
+    },
+    "M2": {
+      "name": "Semantic mapper matching",
+      "filename": "teaming_uc1_m2.csv"
+    },
+    "M3": {
+      "name": "BoostSRL / relational learning",
+      "filename": "teaming_uc1_m3.csv"
+    },
+    "M6": {
+      "name": "Exact knapsack coverage",
+      "filename": "teaming_uc1_m6.csv"
+    },
+    "M7": {
+      "name": "Marginal-utility knapsack",
+      "filename": "teaming_uc1_m7.csv"
+    }
+  },
+  "files": {
+    "table2": "/Users/tej/Desktop/Recommendation_Projects/Teaming/evaluation/output/fairness_table2_gender.csv",
+    "table3": "/Users/tej/Desktop/Recommendation_Projects/Teaming/evaluation/output/fairness_table3_gender.csv",
+    "support": "/Users/tej/Desktop/Recommendation_Projects/Teaming/evaluation/output/fairness_support_gender.csv",
+    "inference": "/Users/tej/Desktop/Recommendation_Projects/Teaming/evaluation/output/fairness_gender_inference.csv"
+  }
+}

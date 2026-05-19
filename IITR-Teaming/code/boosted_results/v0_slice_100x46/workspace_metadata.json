@@ -1,0 +1,25 @@
+{
+  "dataset": "IITR-Teaming v0 paper slice",
+  "proposal_count": 100,
+  "anchor_researcher_count": 46,
+  "unique_proposal_ids": 100,
+  "query_count": 4600,
+  "expected_query_count": 4600,
+  "negative_multiplier": 1.0,
+  "train_ratio": 0.8,
+  "skill_match_threshold": 0.9,
+  "trees": 20,
+  "seed": 12345,
+  "heldout_evaluation": {
+    "test_pos_count": 78,
+    "test_neg_count": 78,
+    "predicted_example_count": 156,
+    "results_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/code/boosted_results/v0_slice_100x46/heldout_eval/results_team.db"
+  },
+  "full_inference": {
+    "pos_count": 386,
+    "neg_count": 4214,
+    "predicted_example_count": 4600,
+    "results_file": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/code/boosted_results/v0_slice_100x46/test/results_team.db"
+  }
+}

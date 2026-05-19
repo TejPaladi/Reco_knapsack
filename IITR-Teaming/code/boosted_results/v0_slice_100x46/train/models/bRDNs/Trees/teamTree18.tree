@@ -1,0 +1,7 @@
+setParam: stringsAreCaseSensitive = true.
+
+usePrologVariables: true.
+
+
+(team(A, B, 0.0624529898815994) :-  /* #pos=308 */ skill(A, UniqueVar19), interest(B, UniqueVar19)).
+team(_, _, -0.041093761536048504) /* #neg=308 */ .

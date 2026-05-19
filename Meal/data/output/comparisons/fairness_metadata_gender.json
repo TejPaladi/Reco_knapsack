@@ -1,0 +1,50 @@
+{
+  "project": "meal_project-3",
+  "cohort_size": 154,
+  "protected_attribute": "gender",
+  "protected_source": "column",
+  "name_inference_mode": null,
+  "protected_groups": [
+    "male",
+    "female"
+  ],
+  "conditioning_attribute": "meal_occasion",
+  "goodness_profile": "beacon_proxy",
+  "table2_score": "avg_goodness",
+  "table2_interpretation": "Table 2 reports each group's share of the total per-user outcome mass using avg_goodness. SP is the total-variation gap between those shares and the cohort's population distribution.",
+  "table3_interpretation": "Table 3 uses thresholded best-bundle quality. A user is oracle-positive when any method reaches best_goodness >= 0.9. A method is prediction-positive when its own best_goodness reaches 0.88. Add-0.5 smoothing is applied to all rate-based quantities in Table 3.",
+  "table3_metrics": {
+    "SP": "Smoothed demographic-parity gap between the two protected groups.",
+    "CSP": "Weighted smoothed demographic-parity gap conditioned on meal_occasion.",
+    "EO": "Average of the smoothed TPR gap and smoothed FPR gap.",
+    "PRP": "Smoothed predictive-rate-parity gap using PPV.",
+    "TE": "Smoothed treatment-equality gap using FN/FP ratios."
+  },
+  "methods": {
+    "M0": {
+      "name": "Random baseline",
+      "filename": "meal_uc1_m0.csv"
+    },
+    "M1": {
+      "name": "Sequential greedy",
+      "filename": "meal_uc1_m1.csv"
+    },
+    "M3": {
+      "name": "Boosted Bandit",
+      "filename": "meal_uc1_m2.csv"
+    },
+    "M6": {
+      "name": "Knapsack",
+      "filename": "meal_uc1_m3.csv"
+    },
+    "M7": {
+      "name": "Marginal Utility",
+      "filename": "meal_uc1_m4.csv"
+    }
+  },
+  "files": {
+    "table2": "/Users/tej/Desktop/Recommendation_Projects/Meal/data/output/comparisons/fairness_table2_gender.csv",
+    "table3": "/Users/tej/Desktop/Recommendation_Projects/Meal/data/output/comparisons/fairness_table3_gender.csv",
+    "support": "/Users/tej/Desktop/Recommendation_Projects/Meal/data/output/comparisons/fairness_support_gender.csv"
+  }
+}

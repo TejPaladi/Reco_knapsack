@@ -1,0 +1,7 @@
+Method,Method_name,decision_rows,predicted_positive_rate,oracle_positive_rate,predicted_positive_count,oracle_positive_count,top_goodness_mean,male_predicted_positive_rate,female_predicted_positive_rate,Method_display
+M0,Random baseline,34522,0.2664,0.4409,9197,15221,0.2333,0.2573,0.2763,M0: Random baseline
+M1,String / lexical matching,34522,0.2918,0.4409,10075,15221,0.5955,0.3141,0.2676,M1: String / lexical matching
+M2,Semantic mapper matching,34522,0.2853,0.4409,9850,15221,0.4811,0.2437,0.3305,M2: Semantic mapper matching
+M3,BoostSRL / relational learning,34522,0.2326,0.4409,8029,15221,0.6096,0.2299,0.2355,M3: BoostSRL / relational learning
+M6,Exact knapsack coverage,34522,0.1822,0.4409,6289,15221,0.5165,0.1838,0.1804,M6: Exact knapsack coverage
+M7,Marginal-utility knapsack,34522,0.3146,0.4409,10860,15221,0.6204,0.341,0.2859,M7: Marginal-utility knapsack

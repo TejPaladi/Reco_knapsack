@@ -1,0 +1,63 @@
+{
+  "project": "IITR-Teaming",
+  "dataset": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/data/v0_teaming",
+  "aligned_rows": 4600,
+  "decision_rows": 31847,
+  "protected_attribute": "gender",
+  "protected_groups": [
+    "male",
+    "female"
+  ],
+  "conditioning_attribute": "proposal_link",
+  "name_inference_mode": "paper_ensemble",
+  "gender_inference": {
+    "resolved_count": 20,
+    "unresolved_count": 26,
+    "source_counts": {
+      "unknown": 26,
+      "ensemble_majority": 20
+    },
+    "description": "Gender is inferred from first names using a paper-style ensemble of gender-guesser, Genderize, and SexMachine, with local research-interest text used only for pronoun fallback when available."
+  },
+  "table2_interpretation": "Table 2 compares the inferred gender distribution of faculty appearing in each method's top recommended team against the inferred IITR faculty baseline.",
+  "table3_interpretation": "Table 3 operates on member-selection decisions. For each aligned (proposal_link, researcher_name) row, the oracle label is the union of members in the highest-goodness top team(s) across methods; each method predicts the members in its own top team. Add-0.5 smoothing is applied to all rate-based metrics.",
+  "table3_metrics": {
+    "SP": "Smoothed demographic-parity gap in member selection.",
+    "CSP": "Weighted smoothed demographic-parity gap conditioned on proposal_link.",
+    "EO": "Average of the smoothed TPR gap and smoothed FPR gap.",
+    "PRP": "Smoothed predictive-rate-parity gap using PPV.",
+    "TE": "Smoothed treatment-equality gap using FN/FP ratios."
+  },
+  "methods": {
+    "M0": {
+      "name": "Random baseline",
+      "filename": "teaming_uc1_m0.csv"
+    },
+    "M1": {
+      "name": "String / lexical matching",
+      "filename": "teaming_uc1_m1.csv"
+    },
+    "M2": {
+      "name": "Semantic mapper matching",
+      "filename": "teaming_uc1_m2.csv"
+    },
+    "M3": {
+      "name": "BoostSRL / relational learning",
+      "filename": "teaming_uc1_m3.csv"
+    },
+    "M6": {
+      "name": "Exact knapsack coverage",
+      "filename": "teaming_uc1_m6.csv"
+    },
+    "M7": {
+      "name": "Marginal-utility knapsack",
+      "filename": "teaming_uc1_m7.csv"
+    }
+  },
+  "files": {
+    "table2": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/evaluation/output_v0/fairness_table2_gender.csv",
+    "table3": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/evaluation/output_v0/fairness_table3_gender.csv",
+    "support": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/evaluation/output_v0/fairness_support_gender.csv",
+    "inference": "/Users/tej/Desktop/Recommendation_Projects/IITR-Teaming/evaluation/output_v0/fairness_gender_inference.csv"
+  }
+}

@@ -1,0 +1,7 @@
+digraph RDN{
+0[style="filled" label="interest(name,value)" color="gray92"];
+1[style="filled" label="skill(pid,value)" color="gray92"];
+2[style="filled" label="team(pid,name)" color="gray52"];
+1 -> 2[label="" style=solid];
+0 -> 2[label="" style=solid];
+}

@@ -1,0 +1,12 @@
+team(nsf20582,broughton_earnie).
+team(nsf20577,brookshire_robert_g_phd).
+team(nsf20604,bakos_jason_d).
+team(nsf20586,banerjee_sourav).
+team(nsf20591,besmann_theodore__m).
+team(nsf21527,bischoff_jeff).
+team(nsf20582,blanchette_james__otto).
+team(nsf21527,carver_wayne).
+team(nsf20609,besmann_theodore__m).
+team(nsf21527,banerjee_sourav).
+team(nsf20584,carver_wayne).
+team(nsf20584,banerjee_sourav).

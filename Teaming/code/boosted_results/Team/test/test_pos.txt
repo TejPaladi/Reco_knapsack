@@ -1,0 +1,6 @@
+team(nsf20582,bayoumi_abdel_moez_e).
+team(nsf20591,brookshire_robert_g_phd).
+team(nsf20591,ali_mohammod).
+team(nsf20591,boltin_nicholas_d).
+team(nsf20582,bayat_mahmoud).
+team(nsf21598,broughton_earnie).

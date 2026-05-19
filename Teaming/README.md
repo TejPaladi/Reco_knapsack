@@ -74,6 +74,25 @@ Teaming/
 └── evaluation/
 ```
 
+## Input CSVs
+
+The USC Teaming input files are stored in `data/v1_input_files/`.
+
+- `v1_researchers.csv` - primary researcher/anchor input used by the UC1
+  notebooks. Key columns are `names`, `descriptions`, `titles`, and `research`.
+- `v1_proposal_links_title_synopsis.csv` - primary proposal-call input used by
+  the UC1 notebooks. Key columns are `nsf_proposal_links_v1`, `title`, and
+  `synopsis`.
+- `v1_og_faculty.csv` - original faculty metadata used by fairness-table
+  generation together with `v1_researchers.csv`. Columns include `name`,
+  `designation`, `titles`, `research`, `background`, `keywords`, `links`, and
+  `area`.
+- `v1_og_rfps.csv` - original RFP metadata retained with the workspace. Columns
+  include `agency`, `title`, `deadline`, `reference`, `budget`, `details`, and
+  `keywords`.
+- `usc_combined_interests.csv` - compact researcher-interest reference table
+  with `names` and `research`.
+
 ## Where To Start
 
 This workspace is notebook-first. There is not one single canonical

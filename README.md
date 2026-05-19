@@ -42,8 +42,12 @@ The main published outputs for each project are under that workspace's
 `IITR-Teaming/` is a cleaned IITR research team recommendation workspace for a
 fixed slice of `100` proposal calls by `46` researchers.
 
-- Inputs: `IITR-Teaming/data/v0_data/archive_proposals.csv` and
-  `IITR-Teaming/data/v0_data/researchers.csv`.
+- Input CSVs:
+  - `IITR-Teaming/data/v0_data/archive_proposals.csv` - proposal-call input
+    with columns such as `Title`, `Attachment Text`, `Start Date`, and
+    `End Date`.
+  - `IITR-Teaming/data/v0_data/researchers.csv` - IITR faculty input with
+    `FacultyName`, `E-Mail`, and `Research Interests`.
 - Published outputs: `IITR-Teaming/data/output/`.
 - Canonical runner from `IITR-Teaming/`:
 
@@ -98,7 +102,22 @@ ranking is `M7`, `M6`, `M1`, `M3`, `M0`.
 `Teaming/` is the USC research team recommendation workspace. It is
 notebook-first rather than a single one-command pipeline.
 
-- Inputs: `Teaming/data/v1_input_files/`.
+- Input CSVs under `Teaming/data/v1_input_files/`:
+  - `v1_researchers.csv` - primary researcher/anchor input used by the UC1
+    notebooks; key columns are `names`, `descriptions`, `titles`, and
+    `research`.
+  - `v1_proposal_links_title_synopsis.csv` - primary proposal-call input used
+    by the UC1 notebooks; key columns are `nsf_proposal_links_v1`, `title`,
+    and `synopsis`.
+  - `v1_og_faculty.csv` - original faculty metadata used by fairness-table
+    generation together with `v1_researchers.csv`; columns include `name`,
+    `designation`, `titles`, `research`, `background`, `keywords`, `links`,
+    and `area`.
+  - `v1_og_rfps.csv` - original RFP metadata retained with the workspace;
+    columns include `agency`, `title`, `deadline`, `reference`, `budget`,
+    `details`, and `keywords`.
+  - `usc_combined_interests.csv` - compact researcher-interest reference table
+    with `names` and `research`.
 - Published outputs: `Teaming/data/output/`.
 - Maintained source output root:
   `Teaming/data/v1_output_teaming/teaming_1698proposals_316researchers/`.

@@ -402,8 +402,9 @@ Rules:
 - Use only names from Available Researchers.
 - Every team must include the anchor researcher exactly as written.
 - Each team should contain 1 to {args.team_size} researchers total, including the anchor.
-- Use comma-separated names inside the team field.
+- Use pipe-separated exact names inside the team field, for example: Name One | Name Two.
 - Do not use semicolons inside the team field.
+- Do not use commas to separate names; some researcher names already contain commas.
 - Prefer teams whose combined skills match the proposal skills and summary.
 
 Anchor Researcher:
@@ -467,6 +468,12 @@ def split_team_field(value: str) -> list[str]:
                 return [clean_text(item) for item in parsed if clean_text(item)]
         except (SyntaxError, ValueError):
             pass
+    if "|" in text:
+        return [
+            clean_text(part).strip(" '\"")
+            for part in text.split("|")
+            if clean_text(part).strip(" '\"")
+        ]
     return [
         clean_text(part).strip(" '\"")
         for part in text.split(",")
@@ -474,9 +481,25 @@ def split_team_field(value: str) -> list[str]:
     ]
 
 
+def exact_names_in_text(value: str, candidates: list[Researcher]) -> list[str]:
+    text = clean_text(value).lower()
+    matches: list[tuple[int, str]] = []
+    for person in candidates:
+        name = person.name.lower()
+        index = text.find(name)
+        if index >= 0:
+            matches.append((index, person.name))
+    ordered: list[str] = []
+    for _, name in sorted(matches, key=lambda item: item[0]):
+        if name not in ordered:
+            ordered.append(name)
+    return ordered
+
+
 def parse_model_teams(
     raw_text: str,
     anchor: Researcher,
+    candidates: list[Researcher],
     candidates_by_key: dict[str, Researcher],
     args: argparse.Namespace,
 ) -> list[list[str]]:
@@ -493,7 +516,7 @@ def parse_model_teams(
         if parts[0].lower() in {"team", "team recommended"}:
             continue
         team_field = parts[-1]
-        names = split_team_field(team_field)
+        names = exact_names_in_text(team_field, candidates) or split_team_field(team_field)
         canonical: list[str] = []
         for name in names:
             candidate = candidates_by_key.get(normalize_name(name).lower())
@@ -675,7 +698,7 @@ def run(args: argparse.Namespace) -> int:
                 raw_name = f"{proposal_index:04d}_{anchor_index:04d}_{sanitize_token(anchor.name)}.txt"
                 (raw_dir / raw_name).write_text(raw_text, encoding="utf-8")
 
-            teams = parse_model_teams(raw_text, anchor, candidates_by_key, args)
+            teams = parse_model_teams(raw_text, anchor, candidates, candidates_by_key, args)
             goodness = [
                 score_team(proposal.skills, team, researcher_skills, args.team_size)
                 for team in teams

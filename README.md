@@ -4,7 +4,7 @@ This repository collects three recommendation and team-formation workspaces
 used for knapsack-style recommendation experiments:
 
 - `IITR-Teaming/` - IITR research team recommendation pipeline and published outputs.
-- `Meal/` - meal bundle recommendation pipeline with BEACON-style proxy outputs.
+- `Meal/` - meal bundle recommendation pipeline with outputs.
 - `Teaming/` - USC research team recommendation notebooks, scripts, and published outputs.
 
 Each workspace has its own README with deeper setup, runner, data, and output

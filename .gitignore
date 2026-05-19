@@ -7,6 +7,7 @@ __pycache__/
 
 # Local/intermediate generated data
 Meal/data/_intermediate_legacy_source/
+llm_outputs/
 
 # GitHub rejects regular Git blobs over 100 MB. These generated Teaming CSVs
 # are kept locally when copied from the parent workspace, but are not committed

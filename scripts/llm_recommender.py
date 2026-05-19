@@ -27,6 +27,7 @@ import os
 import re
 import sys
 import time
+import importlib.util
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -216,6 +217,22 @@ def output_path_for(bundle: DomainBundle, args: argparse.Namespace) -> Path:
     return bundle.output_dir / f"teaming_uc1_m5_{model_slug(args.model)}.csv"
 
 
+def load_metric_module(domain: str):
+    if domain == "iitr-teaming":
+        metric_path = repo_path("IITR-Teaming/code/metrics_scorer.py")
+    elif domain == "teaming":
+        metric_path = repo_path("Teaming/code/metrics_scorer.py")
+    else:
+        raise ValueError(f"Unsupported domain for metrics: {domain}")
+
+    spec = importlib.util.spec_from_file_location(f"{domain.replace('-', '_')}_metrics_scorer", metric_path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Unable to load metric scorer from {metric_path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 def load_usc_teaming(args: argparse.Namespace) -> DomainBundle:
     researchers_path = repo_path(args.researchers_csv)
     proposals_path = repo_path(args.proposals_csv)
@@ -396,7 +413,8 @@ Required header:
 team
 
 Task:
-Recommend exactly {args.num_teams} candidate teams for the anchor researcher and proposal below.
+Recommend up to {args.num_teams} candidate teams for the anchor researcher and proposal below.
+Prefer fewer, higher-confidence teams over filling the list with weak or redundant teams.
 
 Rules:
 - Use only names from Available Researchers.
@@ -405,7 +423,9 @@ Rules:
 - Use pipe-separated exact names inside the team field, for example: Name One | Name Two.
 - Do not use semicolons inside the team field.
 - Do not use commas to separate names; some researcher names already contain commas.
+- Do not pad the response with low-quality teams just to reach the maximum count.
 - Prefer teams whose combined skills match the proposal skills and summary.
+- Prefer teams that are compact, non-redundant, and high-confidence.
 
 Anchor Researcher:
 {format_researcher(anchor)}
@@ -540,52 +560,19 @@ def score_team(
     proposal_skills: list[str],
     team: list[str],
     researcher_skills: dict[str, list[str]],
-    max_team_size: int,
+    metrics_module: Any,
 ) -> float:
-    demand = proposal_skills or ["general"]
-    demand_set = set(demand)
-    team = list(dict.fromkeys(team))
+    if not proposal_skills or not team:
+        return 0.0
 
-    covered: set[str] = set()
-    redundant: set[str] = set()
-    for member in team:
-        for skill in researcher_skills.get(member, []):
-            if skill not in demand_set:
-                continue
-            if skill in covered:
-                redundant.add(skill)
-            else:
-                covered.add(skill)
-
-    redundancy = len(redundant) / max(1, len(demand))
-    set_size = len(team) / max(1, max_team_size)
-    coverage = len(covered) / max(1, len(demand))
-    k_robust = 0.0
-
-    if coverage >= 1.0 and len(team) >= max_team_size:
-        for remove_count in range(1, len(team)):
-            for removed_index in range(len(team)):
-                reduced = team[:removed_index] + team[removed_index + remove_count :]
-                reduced_covered = {
-                    skill
-                    for member in reduced
-                    for skill in researcher_skills.get(member, [])
-                    if skill in demand_set
-                }
-                if len(reduced_covered) / max(1, len(demand)) >= coverage:
-                    k_robust = 1.0
-                    break
-            if k_robust:
-                break
-
-    weights = [0.125, 0.125, 0.375, 0.375]
-    goodness = (
-        weights[0] * redundancy
-        + weights[1] * set_size
-        + weights[2] * coverage
-        + weights[3] * k_robust
-    )
-    return round(float(goodness), 4)
+    scorer = metrics_module.MetricScorer()
+    scorer.demand = list(proposal_skills)
+    scorer.team = list(team)
+    for researcher_name in scorer.team:
+        scorer.researchers[researcher_name] = set(researcher_skills.get(researcher_name, []))
+    scorer.set_new_weights([-1, -1, 1, 1])
+    scorer.run_metrics()
+    return round(float(scorer.goodness), 4)
 
 
 def row_for_output(
@@ -658,6 +645,7 @@ def write_prompt_manifest(path: Path, prompts: list[dict[str, str]]) -> None:
 def run(args: argparse.Namespace) -> int:
     bundle = load_domain(args)
     output_path = output_path_for(bundle, args)
+    metrics_module = load_metric_module(bundle.domain)
     call_count = len(bundle.researchers) * len(bundle.proposals)
 
     print_counts(bundle, None, None)
@@ -700,7 +688,7 @@ def run(args: argparse.Namespace) -> int:
 
             teams = parse_model_teams(raw_text, anchor, candidates, candidates_by_key, args)
             goodness = [
-                score_team(proposal.skills, team, researcher_skills, args.team_size)
+                score_team(proposal.skills, team, researcher_skills, metrics_module)
                 for team in teams
             ]
             scored = sorted(zip(goodness, teams, strict=True), key=lambda item: item[0], reverse=True)

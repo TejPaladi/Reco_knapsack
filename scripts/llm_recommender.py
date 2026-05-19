@@ -41,7 +41,7 @@ USC_BAD_PROPOSAL_LINKS = {
 MODEL_ALIASES = {
     "gemini-3-flash-live": "gemini-3-flash-preview",
     "gemini-3-flash": "gemini-3-flash-preview",
-    "gemma-4-31b": "gemma-4-31b",
+    "gemma-4-31b": "models/gemma-4-31b-it",
 }
 
 STOPWORDS = {

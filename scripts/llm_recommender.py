@@ -689,6 +689,8 @@ def run(args: argparse.Namespace) -> int:
     output_path = output_path_for(bundle, args)
     metrics_module = load_metric_module(bundle.domain)
     call_count = len(bundle.researchers) * len(bundle.proposals)
+    if args.run and not args.append_output and output_path.exists():
+        output_path.unlink()
 
     print_counts(bundle, None, None)
     print(f"Model alias: {args.model}")
@@ -704,8 +706,10 @@ def run(args: argparse.Namespace) -> int:
     all_rows: list[dict[str, object]] = []
     prompt_manifest: list[dict[str, str]] = []
     raw_dir = output_path.parent / f"{output_path.stem}_raw"
+    output_rows = 0
 
     for proposal_index, proposal in enumerate(bundle.proposals, start=1):
+        proposal_rows: list[dict[str, object]] = []
         for anchor_index, anchor in enumerate(bundle.researchers, start=1):
             candidates = candidate_pool_for(anchor, bundle.researchers, args)
             prompt = build_prompt(proposal, anchor, candidates, args)
@@ -736,9 +740,12 @@ def run(args: argparse.Namespace) -> int:
             scored = sorted(zip(goodness, teams, strict=True), key=lambda item: item[0], reverse=True)
             sorted_goodness = [score for score, _ in scored]
             sorted_teams = [team for _, team in scored]
-            all_rows.append(row_for_output(bundle, proposal, anchor, sorted_teams, sorted_goodness))
+            proposal_rows.append(row_for_output(bundle, proposal, anchor, sorted_teams, sorted_goodness))
             time.sleep(args.sleep_seconds)
 
+        all_rows.extend(proposal_rows)
+        if args.run:
+            output_rows = write_output_csv(output_path, bundle.output_columns, proposal_rows, append=True)
         print(f"processed proposals: {proposal_index}/{len(bundle.proposals)}")
 
     if not args.run:
@@ -754,7 +761,10 @@ def run(args: argparse.Namespace) -> int:
         print(f"Wrote prompt examples: {manifest_path}")
         return 0
 
-    output_rows = write_output_csv(output_path, bundle.output_columns, all_rows, append=args.append_output)
+    if args.run:
+        # The proposal-level writes already persisted the rows; this final pass is only used
+        # to report a stable row count if the run completed normally.
+        output_rows = write_output_csv(output_path, bundle.output_columns, [], append=True)
     print_counts(bundle, output_path, output_rows)
     return 0
 

@@ -42,6 +42,7 @@ USC_BAD_PROPOSAL_LINKS = {
 MODEL_ALIASES = {
     "gemini-3-flash-live": "gemini-3-flash-preview",
     "gemini-3-flash": "gemini-3-flash-preview",
+    "gemini-2.5-flash": "models/gemini-2.5-flash",
     "gemma-4-31b": "models/gemma-4-31b-it",
 }
 
@@ -390,6 +391,14 @@ def load_domain(args: argparse.Namespace) -> DomainBundle:
     raise ValueError(f"Unsupported domain: {args.domain}")
 
 
+def apply_index_slice(items: list[Any], start_index: int, end_index: int) -> list[Any]:
+    if start_index <= 0 and end_index <= 0:
+        return items
+    start = max(0, start_index - 1) if start_index > 0 else 0
+    stop = end_index if end_index > 0 else len(items)
+    return items[start:stop]
+
+
 def format_researcher(person: Researcher) -> str:
     parts = [f"name={person.name}", f"skills={', '.join(person.skills)}"]
     if person.title:
@@ -419,13 +428,14 @@ Prefer fewer, higher-confidence teams over filling the list with weak or redunda
 Rules:
 - Use only names from Available Researchers.
 - Every team must include the anchor researcher exactly as written.
-- Each team should contain 1 to {args.team_size} researchers total, including the anchor.
+- Each team should contain 2 to {args.team_size} researchers total, including the anchor.
 - Use pipe-separated exact names inside the team field, for example: Name One | Name Two.
 - Do not use semicolons inside the team field.
 - Do not use commas to separate names; some researcher names already contain commas.
 - Do not pad the response with low-quality teams just to reach the maximum count.
 - Prefer teams whose combined skills match the proposal skills and summary.
 - Prefer teams that are compact, non-redundant, and high-confidence.
+- Do not return a single-person team.
 
 Anchor Researcher:
 {format_researcher(anchor)}
@@ -460,12 +470,25 @@ def call_model(prompt: str, args: argparse.Namespace) -> str:
         temperature=args.temperature,
         max_output_tokens=args.max_output_tokens,
     )
-    response = client.models.generate_content(
-        model=model_id_for(args),
-        contents=prompt,
-        config=config,
-    )
-    return clean_text(getattr(response, "text", ""))
+    last_error: Exception | None = None
+    for attempt in range(1, args.api_retries + 1):
+        try:
+            response = client.models.generate_content(
+                model=model_id_for(args),
+                contents=prompt,
+                config=config,
+            )
+            return clean_text(getattr(response, "text", ""))
+        except Exception as exc:  # noqa: BLE001
+            last_error = exc
+            message = str(exc)
+            transient = any(token in message for token in ("503", "500", "429", "UNAVAILABLE", "INTERNAL"))
+            if not transient or attempt >= args.api_retries:
+                raise
+            time.sleep(min(args.retry_sleep_seconds * attempt, args.max_retry_sleep_seconds))
+    if last_error is not None:
+        raise last_error
+    raise RuntimeError("Model call failed without raising an error.")
 
 
 def strip_fences(text: str) -> str:
@@ -611,11 +634,19 @@ def candidate_pool_for(anchor: Researcher, researchers: list[Researcher], args: 
     return candidates
 
 
-def write_output_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> int:
+def write_output_csv(
+    path: Path,
+    fieldnames: list[str],
+    rows: list[dict[str, object]],
+    append: bool = False,
+) -> int:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", newline="", encoding="utf-8") as handle:
+    mode = "a" if append and path.exists() else "w"
+    write_header = mode == "w"
+    with path.open(mode, newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
-        writer.writeheader()
+        if write_header:
+            writer.writeheader()
         writer.writerows(rows)
     with path.open(newline="", encoding="utf-8") as handle:
         return sum(1 for _ in csv.DictReader(handle))
@@ -644,6 +675,17 @@ def write_prompt_manifest(path: Path, prompts: list[dict[str, str]]) -> None:
 
 def run(args: argparse.Namespace) -> int:
     bundle = load_domain(args)
+    bundle = DomainBundle(
+        domain=bundle.domain,
+        researchers_path=bundle.researchers_path,
+        proposals_path=bundle.proposals_path,
+        raw_researcher_rows=bundle.raw_researcher_rows,
+        raw_proposal_rows=bundle.raw_proposal_rows,
+        researchers=apply_index_slice(bundle.researchers, args.researcher_start, args.researcher_end),
+        proposals=apply_index_slice(bundle.proposals, args.proposal_start, args.proposal_end),
+        output_columns=bundle.output_columns,
+        output_dir=bundle.output_dir,
+    )
     output_path = output_path_for(bundle, args)
     metrics_module = load_metric_module(bundle.domain)
     call_count = len(bundle.researchers) * len(bundle.proposals)
@@ -712,7 +754,7 @@ def run(args: argparse.Namespace) -> int:
         print(f"Wrote prompt examples: {manifest_path}")
         return 0
 
-    output_rows = write_output_csv(output_path, bundle.output_columns, all_rows)
+    output_rows = write_output_csv(output_path, bundle.output_columns, all_rows, append=args.append_output)
     print_counts(bundle, output_path, output_rows)
     return 0
 
@@ -733,11 +775,19 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--temperature", type=float, default=0.2)
     parser.add_argument("--max-output-tokens", type=int, default=2048)
     parser.add_argument("--sleep-seconds", type=float, default=4.1)
+    parser.add_argument("--api-retries", type=int, default=4, help="Retry transient model API failures.")
+    parser.add_argument("--retry-sleep-seconds", type=float, default=2.0, help="Base backoff sleep between API retries.")
+    parser.add_argument("--max-retry-sleep-seconds", type=float, default=12.0, help="Maximum sleep between API retries.")
     parser.add_argument("--max-calls", type=int, default=100, help="Safety limit for API calls; use 0 for no limit.")
     parser.add_argument("--save-raw", action="store_true", help="Save raw model responses beside the output CSV.")
     parser.add_argument("--limit-proposals", type=int, default=0, help="Use first N effective proposals; 0 means all.")
     parser.add_argument("--limit-researchers", type=int, default=0, help="Use first N researchers; 0 means all.")
     parser.add_argument("--limit-candidates", type=int, default=0, help="Limit candidate researchers in prompt; 0 means all.")
+    parser.add_argument("--proposal-start", type=int, default=0, help="1-based proposal slice start; 0 means all.")
+    parser.add_argument("--proposal-end", type=int, default=0, help="1-based proposal slice end; 0 means all.")
+    parser.add_argument("--researcher-start", type=int, default=0, help="1-based researcher slice start; 0 means all.")
+    parser.add_argument("--researcher-end", type=int, default=0, help="1-based researcher slice end; 0 means all.")
+    parser.add_argument("--append-output", action="store_true", help="Append to an existing output CSV instead of overwriting it.")
     parser.add_argument("--max-field-chars", type=int, default=900)
     parser.add_argument("--max-skills-per-record", type=int, default=40)
     parser.add_argument("--max-prompt-manifest", type=int, default=5)

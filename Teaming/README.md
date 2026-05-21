@@ -109,6 +109,17 @@ entry points are:
 - `code/M7.py`
 - `code/Results.ipynb`
 
+### LLM output runner
+
+The repo now also includes `scripts/llm_recommender.py` for the M5-style LLM
+baseline. For the USC Teaming slice it reads:
+
+- `data/v1_input_files/v1_researchers.csv`
+- `data/v1_input_files/v1_proposal_links_title_synopsis.csv`
+
+It writes the generated CSVs to `data/output/` using names like
+`teaming_uc1_m5_<model>.csv`.
+
 The main published results are already collected under `data/output/`, so many
 GitHub users will not need to rerun the notebooks unless they want to extend
 the study.

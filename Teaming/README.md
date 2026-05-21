@@ -120,6 +120,15 @@ baseline. For the USC Teaming slice it reads:
 It writes the generated CSVs to `data/output/` using names like
 `teaming_uc1_m5_<model>.csv`.
 
+For a paper-style reproducible USC subset, see:
+
+- `data/output/llm_subsets/usc_llm_subset_researchers_46_seed42.csv`
+- `data/output/llm_subsets/usc_llm_subset_proposals_100_seed42.csv`
+- `data/output/llm_subsets/usc_llm_subset_manifest_seed42.json`
+
+These files freeze a deterministic 46-researcher / 100-proposal slice so the
+LLM baseline can be rerun without relying on the exact unpublished paper IDs.
+
 The main published results are already collected under `data/output/`, so many
 GitHub users will not need to rerun the notebooks unless they want to extend
 the study.
